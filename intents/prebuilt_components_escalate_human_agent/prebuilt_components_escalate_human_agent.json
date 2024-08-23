@@ -1,0 +1,11 @@
+{
+  "name": "b95803ab-591f-49be-9e5e-6b130e6c9a46",
+  "displayName": "prebuilt_components_escalate_human_agent",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Used by a user to indicate that they wish to speak to a live agent.",
+  "numTrainingPhrases": 48
+}

@@ -1,0 +1,15 @@
+{
+  "name": "bb19eebf-37a7-4f0c-89d1-bda259461016",
+  "displayName": "prebuilt_components_address_collection_locality",
+  "parameters": [ {
+    "id": "number",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Used to indicate this address element needs to be changed. Locality indicates an incorporated city or town political entity.",
+  "numTrainingPhrases": 54
+}

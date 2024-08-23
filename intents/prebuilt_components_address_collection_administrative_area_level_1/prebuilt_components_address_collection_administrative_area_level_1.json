@@ -1,0 +1,11 @@
+{
+  "name": "bd8bf76e-7c7d-4626-9065-c77c9121287e",
+  "displayName": "prebuilt_components_address_collection_administrative_area_level_1",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Used to indicate this address element needs to be changed. Administrative_area_level_1 indicates a first-order civil entity below the country level. Within the United States, these administrative levels are states.",
+  "numTrainingPhrases": 53
+}

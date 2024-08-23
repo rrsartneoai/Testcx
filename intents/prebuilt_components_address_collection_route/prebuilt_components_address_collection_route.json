@@ -1,0 +1,11 @@
+{
+  "name": "b9a4b0b0-a43a-44d0-8809-c053dcd774ab",
+  "displayName": "prebuilt_components_address_collection_route",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Used to indicate this address element needs to be changed. Route indicates a named route.",
+  "numTrainingPhrases": 53
+}
