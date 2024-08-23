@@ -1,0 +1,78 @@
+{
+  "name": "801c2393-9ca8-46cb-9b8f-647b30371eae",
+  "displayName": "Verify Delivery Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Before I can send a replacement card, I'll need to verify your delivery address. Is your address still 1600 Amphitheatre Parkway, Mountain View, CA 94043?", "Before sending a new card, I'll need to verify your delivery address. Is 1600 Amphitheatre Parkway, Mountain View, CA 94043 your current address?", "I'll need to verify your delivery address before sending a new card. Are you still at 1600 Amphitheatre Parkway, Mountain View, CA 94043?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Replacement Card Issued",
+    "name": "bf57562f-7d81-4e94-8526-ac66c4e0ad95"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Delivery Address Collection",
+    "name": "ebb61517-29f4-4a0f-82d2-61271a48494a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t get that. Can you verify you want your cart delivered to 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I didn’t catch that. Is your delivery address still 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "I didn’t catch that. I'll need to verify your delivery address. Is it still 1600 Amphitheatre Parkway, Mountain View, CA 94043?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "86cd8ca9-227b-467f-bfc9-2db07e89126c"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t get that. Can you verify you want your cart delivered to 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I didn’t catch that. Is your delivery address still 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "I didn’t catch that. I'll need to verify your delivery address. Is it still 1600 Amphitheatre Parkway, Mountain View, CA 94043?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b4312c6d-bd11-4abf-af83-20cbb9f20978"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you verify you want your cart delivered to 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I am unable to hear you. Is your delivery address still 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I could not hear you. I'll need to verify your delivery address. Is it still 1600 Amphitheatre Parkway, Mountain View, CA 94043?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bd11b0c4-d366-48dc-8cd9-491f0ed5bb12"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you verify you want your cart delivered to 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I am unable to hear you. Is your delivery address still 1600 Amphitheatre Parkway, Mountain View, CA 94043? ", "Sorry, I could not hear you. I'll need to verify your delivery address. Is it still 1600 Amphitheatre Parkway, Mountain View, CA 94043?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "13064655-53c0-4959-8dfd-70e257c8c70a"
+  } ]
+}

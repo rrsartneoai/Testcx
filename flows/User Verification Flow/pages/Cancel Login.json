@@ -1,0 +1,29 @@
+{
+  "name": "39cd62b2-36b4-46d5-9691-d1685a8e35cf",
+  "displayName": "Cancel Login",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I'm sorry, I'm not able to log into your account.", "I'm sorry, I can't log you into your account", "Sorry, I can't authenticate you." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": true
+      }, {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "560cd6ee-f9ba-4c32-9de9-028f10e55bff"
+  } ]
+}

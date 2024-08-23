@@ -1,0 +1,208 @@
+{
+  "name": "9cb76b51-dd1d-4dd7-aa8f-a0351133c931",
+  "tags": [ "#purchase" ],
+  "displayName": "Happy path - Start purchase flow and add item to cart in one utterance",
+  "notes": "Verifies that when a user requests to purchase an item after being greeted by the agent, the item is added to the cart.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Good day! What can I do for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'd like to buy a Nest Thermostat"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "retail.purchase_item_initiate"
+      },
+      "currentPage": {
+        "name": "Check Login",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course, I am happy to assist with that. Do you have an account you would like to login to, or would you prefer to continue as a guest?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Log in"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.user_login"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number you're calling from the same one registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks, I have verified your phone number." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "Could you please give me the PIN you received? You can say it or enter it into the keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat",
+        "pin_number": 1234
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! I have verified your account." ]
+      }, {
+        "text": [ "I have added a Nest Thermostat to your cart. Would you like anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606862886,
+    "nanos": 366796000
+  }
+}

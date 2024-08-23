@@ -1,0 +1,194 @@
+{
+  "name": "adb1f93f-7267-436e-b31c-3433575dfc87",
+  "tags": [ "#nomatch", "#purchase", "#agentredirect" ],
+  "displayName": "Error handling - Testing no match intent when user checks out with an empty cart",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Looking to buy something"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.purchase_item_initiate"
+      },
+      "currentPage": {
+        "name": "Check Login",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course, I am happy to assist with that. Would you like to login or continue as a guest?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Guest please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.proceed_as_guest"
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What can I help you purchase today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I am ready to checkout"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.ready_to_checkout"
+      },
+      "currentPage": {
+        "name": "Confirm No Purchase",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I see your cart is empty. Did you want to purchase anything today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Radio on"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Confirm No Purchase",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn’t understand that. Is there anything you wanted to purchase today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Volume up"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Confirm No Purchase",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I didn't catch that. Would you like to purchase something today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Why are you always a robot"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "It looks like we're having issues communicating." ]
+      }, {
+        "text": [ "I'll transfer you to one of our representatives." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607546088,
+    "nanos": 565883000
+  }
+}

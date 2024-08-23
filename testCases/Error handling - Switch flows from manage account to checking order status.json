@@ -1,0 +1,265 @@
+{
+  "name": "7d44c30e-851d-4100-88d2-3bf662a50f2b",
+  "tags": [ "#switchflows", "#account", "#manageaccount", "#orders", "#orderstatus" ],
+  "displayName": "Error handling - Switch flows from manage account to checking order status",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I need help with my account"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.manage_account_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is the phone number you're calling from the same one that was used with your account?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN. Could you please give me the PIN you received? You can say it or enter it into the keypad." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5894"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false,
+        "pin_number": "5894"
+      },
+      "currentPage": {
+        "name": "Manage Account",
+        "flow": "Account Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I was able to verify your account." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "How can I assist you with your account? " ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Account Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I check the status of my order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Check Status",
+        "operation_complete": false,
+        "pin_number": "5894"
+      },
+      "triggeredIntent": {
+        "name": "retail.check_order_status_initiate"
+      },
+      "currentPage": {
+        "name": "Check Recent Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can definitely look into that. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is this in regards to your recent order of the Google Home?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Google Home",
+        "pin_number": "5894"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "The order is currently being processed. You should get an email with a tracking number when it ships." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Can I help you with anything else?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No thank you"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Google Home",
+        "pin_number": "5894"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "In that case, thank you for calling. Goodbye!" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607556379,
+    "nanos": 678254000
+  }
+}

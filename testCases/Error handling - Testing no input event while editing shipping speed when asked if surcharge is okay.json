@@ -1,0 +1,246 @@
+{
+  "name": "febd0022-7955-4cc3-9f21-4d031be06687",
+  "tags": [ "#noinput", "#orders", "#editorder", "#agentredirect" ],
+  "displayName": "Error handling - Testing no input event while editing shipping speed when asked if surcharge is okay",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi can I get faster shipping for the pixel 5 I ordered"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "retail.edit_order_shipping_speed_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I’ll be happy to help!" ]
+      }, {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number associated with your account the same as the one you're dialing in from?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to authenticate you. Can I send a PIN to your phone? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "May I have the PIN you received? You can either say it or use your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2309"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "2309"
+      },
+      "currentPage": {
+        "name": "Edit Shipping Speed",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks! I've verified your account." ]
+      }, {
+        "text": [ "Looks like the Pixel 5 is eligible for expedited shipping, which takes 1 to 2 business days. It will be a $5 additional charge. Would you like to go ahead and process that?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "2309"
+      },
+      "currentPage": {
+        "name": "Edit Shipping Speed",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I could not hear you. Do you still want me to expedite shipping for $5?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "2309"
+      },
+      "currentPage": {
+        "name": "Edit Shipping Speed",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I could not hear you. Do you still want me to expedite shipping for $5?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Shipping Speed",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "2309"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn't get that." ]
+      }, {
+        "text": [ "Please wait while I transfer you to one of our customer support specialists." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607528672,
+    "nanos": 609853000
+  }
+}

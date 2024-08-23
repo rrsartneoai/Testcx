@@ -1,0 +1,119 @@
+{
+  "name": "7b8275ed-a4ae-4eb7-95f6-18e657eda4e5",
+  "displayName": "Request to send PIN",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply.", "I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply.", "I'll need to authenticate you. Can I send a PIN to your phone? Standard message charges may apply." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect PIN",
+    "name": "6109331a-f096-4a71-9cae-d4128258be0c"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Login",
+    "name": "441a5ddb-fbfa-425c-baf8-09e491033841"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Can I send a PIN to your phone? Standard message charges may apply.", "I didn't catch that. Can I send a PIN to your phone? Standard message charges may apply.", "I didn’t get that. I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "585a2699-8ed5-4463-ae24-fa275bfffa59"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Can I send a PIN to your phone? Standard message charges may apply.", "I didn't catch that. Can I send a PIN to your phone? Standard message charges may apply.", "I didn’t get that. I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "f28dd903-a4d0-47d2-ae39-8a344292fdbb"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seems I’m having a problem understanding you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f7d37110-5c96-4a11-8621-f360041119de"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can I send a PIN to your phone? Standard message charges may apply.", "Sorry, I am unable to hear you. Can I send a PIN to your phone? Standard message charges may apply.", "Sorry, I could not hear you. I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "d8a55031-02b2-4d14-894d-1414a3c12f6d"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can I send a PIN to your phone? Standard message charges may apply.", "Sorry, I am unable to hear you. Can I send a PIN to your phone? Standard message charges may apply.", "Sorry, I could not hear you. I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "cd828512-7696-43b2-b06a-1e82f7672521"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "61a5d101-1842-4264-8f74-63bf3405618f"
+  } ]
+}

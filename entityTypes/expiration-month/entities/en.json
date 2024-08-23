@@ -1,0 +1,51 @@
+{
+  "entities": [ {
+    "value": "1",
+    "synonyms": [ "1", "January" ],
+    "languageCode": "en"
+  }, {
+    "value": "2",
+    "synonyms": [ "2", "February" ],
+    "languageCode": "en"
+  }, {
+    "value": "3",
+    "synonyms": [ "3", "March" ],
+    "languageCode": "en"
+  }, {
+    "value": "4",
+    "synonyms": [ "4", "April" ],
+    "languageCode": "en"
+  }, {
+    "value": "5",
+    "synonyms": [ "5", "May" ],
+    "languageCode": "en"
+  }, {
+    "value": "6",
+    "synonyms": [ "6", "June" ],
+    "languageCode": "en"
+  }, {
+    "value": "7",
+    "synonyms": [ "7", "July" ],
+    "languageCode": "en"
+  }, {
+    "value": "8",
+    "synonyms": [ "8", "August" ],
+    "languageCode": "en"
+  }, {
+    "value": "9",
+    "synonyms": [ "9", "September" ],
+    "languageCode": "en"
+  }, {
+    "value": "10",
+    "synonyms": [ "10", "October" ],
+    "languageCode": "en"
+  }, {
+    "value": "11",
+    "synonyms": [ "11", "November" ],
+    "languageCode": "en"
+  }, {
+    "value": "12",
+    "synonyms": [ "12", "December" ],
+    "languageCode": "en"
+  } ]
+}

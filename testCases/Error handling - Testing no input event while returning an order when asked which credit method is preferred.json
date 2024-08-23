@@ -1,0 +1,246 @@
+{
+  "name": "633f29a8-6710-4ca0-b958-5348df58ef8f",
+  "tags": [ "#noinput", "#orders", "#returnorder", "#agentredirect" ],
+  "displayName": "Error handling - Testing no input event while returning an order when asked which credit method is preferred",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi can I return my nest thermostat"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "retail.return_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, no problem. " ]
+      }, {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Is the phone number on your account the same as the one you're calling in from?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5830"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat",
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Return order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! I have verified your account." ]
+      }, {
+        "text": [ "Looks like the Nest Thermostat is eligible to be returned. Let me start the return process for you. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat",
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Return order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I am unable to hear you. Would you prefer store credit or a credit to the original payment form." ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat",
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Return order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I am having trouble hearing you. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat",
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn’t catch what you said." ]
+      }, {
+        "text": [ "Let me transfer you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607528217,
+    "nanos": 157201000
+  }
+}

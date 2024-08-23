@@ -1,0 +1,173 @@
+{
+  "name": "204258cc-3da6-4a67-8fbc-5bb38b6f293f",
+  "tags": [ "#search" ],
+  "displayName": "Happy path - Ask for store hours after requesting to provide city and state",
+  "notes": "This test case searches for a nearby store and provides a street address. When prompted for a zip code, instead of providing a code, it immediately provides a city and state instead. When asked if the user would like store hours, the test case responds in the affirmative, and verifies that store hours are returned.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hello! How can I help you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm looking for a nearby store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store"
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Let me look that up for you." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "100 main street"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store"
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "May I have your zip code? You can say it or type it into the keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm in San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "admin-area": "California",
+        "city": "San Francisco",
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store",
+        "store-id": 2,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "retail.extract.city_and_admin_area"
+      },
+      "currentPage": {
+        "name": "Ask About Store Hours",
+        "flow": "Store Search Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I found one location at 1600 Amphitheatre Parkway, Mountain View, California 94043." ]
+      }, {
+        "text": [ "Would you like to know the store hours?" ]
+      } ],
+      "currentFlow": {
+        "name": "Store Search Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "The store hours are 9 to 5." ]
+      }, {
+        "text": [ "Anything else for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606750061,
+    "nanos": 571297000
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "name": "5f302df0-ef20-47b5-8262-7e417dba835f",
+  "displayName": "Cancel Order",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I found the order containing the $session.params.order_unit. Should I go ahead and cancel that order?", "I was able to find your order for the $session.params.order_unit. Do you want me to go ahead and cancel the order?", "I was able to find your order for the $session.params.order_unit. Do you want me to cancel the order?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay I will not process the cancellation order. ", "No problem, I will not process the cancellation order." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "093ee1ca-0b68-4a94-86d0-3a82f329b0c0"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay I have cancelled the order for you. You should receive a confirmation email in a few minutes.", "I have cancelled the order for you. You should receive a confirmation email soon. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "order_number",
+        "value": null
+      }, {
+        "parameter": "order_unit",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "7e4355e9-39c0-4a15-966d-e9f6f328c020"
+  }, {
+    "intent": "retail.wrong_order",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "28d651f8-3601-429b-ab75-9ac9e7d6b9ca"
+  }, {
+    "intent": "small_talk_confirmation.cancel",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay I have cancelled the order for you. You should receive a confirmation email in a few minutes.", "I have cancelled the order for you. You should receive a confirmation email soon. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "order_number",
+        "value": null
+      }, {
+        "parameter": "order_unit",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "6b6000a8-621b-4ba1-b8d7-25746c8db226"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Should I process the cancellation request?", "I didn't catch that. Should I process the cancellation request?", "I didn’t get that. Do you want me to go ahead and process the cancellation request?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0e86f641-cb8d-4207-89c0-2f51c88819a7"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Should I process the cancellation request?", "I didn't catch that. Should I process the cancellation request?", "I didn’t get that. Do you want me to go ahead and process the cancellation request?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "26665f9f-8e35-4a0c-a46f-e1f3eff302bc"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Should I process the cancellation request?", "Sorry, I am unable to hear you. Should I process the cancellation request?", "Sorry, I could not hear you. Do you want me to go ahead and process the cancellation request?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7851adb0-ae60-4024-a265-356f933b522e"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Should I process the cancellation request?", "Sorry, I am unable to hear you. Should I process the cancellation request?", "Sorry, I could not hear you. Do you want me to go ahead and process the cancellation request?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6138c296-2478-4334-8ea6-78de638ed451"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you.", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1252b052-9e14-4f6c-9584-9521ca16e1bf"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that. ", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "32761a7a-79a0-4055-af6f-c6c4b9fbc371"
+  } ]
+}

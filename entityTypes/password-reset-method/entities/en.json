@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "text",
+    "synonyms": [ "text", "text message", "sms", "sms message" ],
+    "languageCode": "en"
+  }, {
+    "value": "email",
+    "synonyms": [ "email", "electronic mail", "mail" ],
+    "languageCode": "en"
+  } ]
+}

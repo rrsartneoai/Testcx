@@ -1,0 +1,219 @@
+{
+  "name": "ba8c4644-3679-44f1-9f65-ca963abca655",
+  "tags": [ "#agentredirect", "#orders", "#editpaymentmethod" ],
+  "displayName": "Agent redirect - Credit Card collection flow agent redirect intent is triggered",
+  "notes": "User just wants to talk to an agent during credit card collection flow",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Edit credit card"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.edit_order_payment_method_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, no problem. " ]
+      }, {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Are you calling from the same number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes I am"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks, I have verified your phone number." ]
+      }, {
+        "text": [ "I'll need to authenticate you. Can I send a PIN to your phone? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes you may"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "It is 5832"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "pin_number": [ 5832 ]
+      },
+      "currentPage": {
+        "name": "Check Recent Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks! I've verified your account." ]
+      }, {
+        "text": [ "Is this for the most recent order you placed containing the Google Home?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes it is"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Google Home",
+        "pin_number": [ 5832 ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request Card Number",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "The order has not yet shipped, so I can help update your payment method. " ]
+      }, {
+        "text": [ "Can I have your card number please? You can say it or use the keypad to enter it." ]
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I just talk to an agent"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Google Home",
+        "pin_number": [ 5832 ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.agent_hand_off"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Please wait a moment while I transfer you to one of our agents." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607437348,
+    "nanos": 370040000
+  }
+}

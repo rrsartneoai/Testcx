@@ -1,0 +1,205 @@
+{
+  "name": "40e043f0-6e5c-4896-85b9-a08c18273582",
+  "tags": [ "#search", "#wait", "#stillthere", "#startover", "#ready" ],
+  "displayName": "Error handling - Testing small talk intents in address collection",
+  "notes": "Testing the follow 4 small_talk intents in the address collection flow, wait, ready, still_there and start_over",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Nearby stores"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help look that up." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Could you give me a minute"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.wait"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, I can wait. Let me know when you're ready." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I am ready"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.ready"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great!" ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Are you there"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.still_there"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'm here!" ]
+      }, {
+        "text": [ "Could you please provide me with your street address? " ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Never mind cancel"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_returning": false,
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.start_over"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright." ]
+      }, {
+        "text": [ "Anything else for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No thank you"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_returning": false,
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I hope you were satisfied with our service today. Thanks and goodbye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607491606,
+    "nanos": 857146000
+  }
+}

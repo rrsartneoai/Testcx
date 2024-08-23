@@ -1,0 +1,171 @@
+{
+  "name": "c1581961-f313-45eb-953d-b374ed16a87f",
+  "tags": [ "#purchase" ],
+  "displayName": "Error handling - Test fallback when user tries to add unsupported item to cart",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi can I buy something "
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.purchase_item_initiate"
+      },
+      "currentPage": {
+        "name": "Check Login",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course, I am happy to assist with that. Would you like to login or continue as a guest?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Guest please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.proceed_as_guest"
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What would you like to order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to buy a bag of oranges"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.unsupported_item_request"
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'm sorry, we don't sell that item." ]
+      }, {
+        "text": [ "What can I help you purchase today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Never mind cancel"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": false,
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.start_over"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Can I help you with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": false,
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "In that case, thank you for calling. Goodbye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607545587,
+    "nanos": 573007000
+  }
+}

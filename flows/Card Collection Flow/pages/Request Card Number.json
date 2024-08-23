@@ -1,0 +1,133 @@
+{
+  "name": "ea76300a-6d5d-4317-968c-70a12cd74187",
+  "displayName": "Request Card Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "card_number",
+      "required": true,
+      "entityType": "@card-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. Can I have your 16 digit card number please? You can say it, or use the keypad to enter it, followed by the pound key.", "I didn't catch that. Could you tell me your 16 digit card number? You can either say it, or type it into the keypad, followed by the pound key.", "I didn’t get that. What’s your 16 digit card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "c299d269-0ea1-4f9b-81e2-2abf94bb7985"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. Can I have your 16 digit card number please? You can say it, or use the keypad to enter it, followed by the pound key.", "I didn't catch that. Could you tell me your 16 digit card number? You can either say it, or type it into the keypad, followed by the pound key.", "I didn’t get that. What’s your 16 digit card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "1f45809f-bb1d-4df9-972b-6207584674a5"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "277ae046-ac86-40b2-8b43-7e30fcee7a3c"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Can I have your 16 digit card number please? You can say it, or use the keypad to enter it, followed by the pound key.", "Sorry, I am unable to hear you. Could you tell me your 16 digit card number? You can either say it, or type it into the keypad, followed by the pound key.", "Sorry, I could not hear you. What’s your 16 digit card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "644cd916-2026-461b-a3d5-98701e97d655"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Can I have your 16 digit card number please? You can say it, or use the keypad to enter it, followed by the pound key.", "Sorry, I am unable to hear you. Could you tell me your 16 digit card number? You can either say it, or type it into the keypad, followed by the pound key.", "Sorry, I could not hear you. What’s your 16 digit card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "58902002-5119-4d4f-8d15-1f0f4443cb8a"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f5317c0b-06b7-4e00-86ca-3fe52aa3950f"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Can I have your card number please? You can say it, or use the keypad to enter it, followed by the pound key.", "Could you tell me your card number? You can either say it, or type it into the keypad, followed by the pound key.", "What’s your card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Expiration Month",
+    "name": "47ee9050-d7b7-4ecb-8091-7f1eeb8a73d0"
+  } ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "41400dc4-620b-4205-a0da-624323a8273e",
+  "displayName": "retail.purchase_item_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 75
+}

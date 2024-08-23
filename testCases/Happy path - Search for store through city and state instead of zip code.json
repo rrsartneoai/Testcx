@@ -1,0 +1,248 @@
+{
+  "name": "44f0a278-4928-4a48-9899-66f2d9a08bdc",
+  "tags": [ "#search" ],
+  "displayName": "Happy path - Search for store through city and state instead of zip code",
+  "notes": "Verify that the user is able to use city and state instead of zip code to provide current address",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Where is the nearest Google store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help look that up for you." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "345 spear street"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "345 spear street",
+          "street-address": "345 spear street"
+        },
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What's your zip code? You can say it out loud or type it in." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I give you my city instead"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "345 spear street",
+          "street-address": "345 spear street"
+        },
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.extract.city_and_admin_area"
+      },
+      "currentPage": {
+        "name": "Request City",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Which city is associated with that address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "It's San Francisco"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "city": "San Francisco",
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "345 spear street",
+          "street-address": "345 spear street"
+        },
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Request Admin Area",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Which state is that in?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "admin_area": "California",
+        "city": "San Francisco",
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "original": "345 spear street",
+          "street-address": "345 spear street"
+        },
+        "operation": "Search Store",
+        "operation_complete": false,
+        "store-id": 2,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Ask About Store Hours",
+        "flow": "Store Search Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I found one location at 1600 Amphitheatre Parkway, Mountain View, California 94043." ]
+      }, {
+        "text": [ "Would you like to know the store hours?" ]
+      } ],
+      "currentFlow": {
+        "name": "Store Search Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Understood!" ]
+      }, {
+        "text": [ "Is there anything else you need help with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm good bye"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no_thats_all"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Glad I could help! Thank you for calling. Bye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607489781,
+    "nanos": 561647000
+  }
+}

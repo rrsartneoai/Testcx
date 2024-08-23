@@ -1,0 +1,14 @@
+{
+  "name": "ee905760-acbb-4edb-933c-4f3b8ab60d80",
+  "displayName": "retail.cancel_order_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 51
+}

@@ -1,0 +1,515 @@
+{
+  "name": "4e5b6699-0695-403b-b0df-f787477b31b7",
+  "tags": [ "#purchase" ],
+  "displayName": "Error handling - Test that user can re-enter address if it was wrong when first collected during the purchase flow",
+  "notes": "User is buying an item as a guest but the address collection the first time got it wrong, so user enters the address a second time.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi can I buy a nest"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "retail.purchase_item_initiate"
+      },
+      "currentPage": {
+        "name": "Check Login",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course, I am happy to assist with that. Do you have an account you would like to login to, or would you prefer to continue as a guest?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Guest please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.proceed_as_guest"
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have added a Nest Thermostat to your cart." ]
+      }, {
+        "text": [ "Can I help your order anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I'll start the checkout process." ]
+      }, {
+        "text": [ "Looks like your cart has the following, Nest Thermostat." ]
+      }, {
+        "text": [ "I will need to collect your shipping address." ]
+      }, {
+        "text": [ "What is your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "343 spear street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "343 spear street San Francisco California",
+          "street-address": "343 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Confirm Shipping Address",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I heard 343 spear street San Francisco California. Is that correct?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "May I have your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "345 spear street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Confirm Shipping Address",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I heard 345 spear street San Francisco California. Is that correct?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request Card Number",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to collect your payment method to complete the purchase. Please have you card ready. " ]
+      }, {
+        "text": [ "What’s your card number? Feel free to say it, or use the keypad to enter it, followed by the pound key." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234890912347890"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_number": "1234890912347890",
+        "cart": "Nest Thermostat",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Request Expiration Month",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Could you give me the month that the card expires on?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "December"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_number": "1234890912347890",
+        "cart": "Nest Thermostat",
+        "expiration_month": "12",
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Request Expiration Year",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Which year does the card expire?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2021"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_number": "1234890912347890",
+        "cart": "Nest Thermostat",
+        "expiration_month": "12",
+        "expiration_year": 2021,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What’s the billing zip code for your card? You can say it, or use the keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "94043"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_is_collected": true,
+        "card_number": "1234890912347890",
+        "card_zip_code": "94043",
+        "cart": "Nest Thermostat",
+        "expiration_month": "12",
+        "expiration_year": 2021,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Purchase Item",
+        "operation_complete": false,
+        "order_unit": "Nest Thermostat"
+      },
+      "currentPage": {
+        "name": "Collect Phone Number",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Could you provide a phone number to send the order confirmation too? Feel free to say it, or you can enter it into the keypad, followed by the pound key." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "8558361987"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_number": "1234890912347890",
+        "card_zip_code": "94043",
+        "expiration_month": "12",
+        "expiration_year": 2021,
+        "guest_phone_number": "8558361987",
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": false,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have placed the order for you. You should receive a confirmation text soon." ]
+      }, {
+        "text": [ "Anything else for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No that will be it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "card_number": "1234890912347890",
+        "card_zip_code": "94043",
+        "expiration_month": "12",
+        "expiration_year": 2021,
+        "guest_phone_number": "8558361987",
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_logged_in": false,
+        "is_returning": false,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no_thats_all"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Glad I could help! Thank you for calling. Bye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607550757,
+    "nanos": 342966000
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "name": "ba5f5c48-c51d-484f-aa47-fd985d3f9054",
+  "tags": [ "#nomatch", "#agenttransfer" ],
+  "displayName": "Error handling - No match intent during User Verification",
+  "notes": "No Match intent triggered 3 times during user verification leading to agent transfer. ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Cancel order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.cancel_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, no problem. " ]
+      }, {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number you're calling from the same one that was used with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Why are you a robot"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I didn’t get that. Is the phone number on your account the same as the one you're calling in from?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Why it it always a robot"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn’t catch that. Are you calling from the same number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Why are you still a robot"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "It seem I’m having a problem understanding you." ]
+      }, {
+        "text": [ "Please hold while I transfer you to one of our representatives." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607439880,
+    "nanos": 380456000
+  }
+}

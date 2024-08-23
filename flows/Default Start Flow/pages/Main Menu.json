@@ -1,0 +1,104 @@
+{
+  "name": "157cd149-724b-4121-9536-aad1cbb6d991",
+  "displayName": "Main Menu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.operation = \"Check Status\" OR $session.params.operation = \"Cancel Order\" OR $session.params.operation = \"Return Order\" OR $session.params.operation = \"Edit Shipping Speed\" OR $session.params.operation = \"Edit Shipping Address\" OR $session.params.operation = \"Edit Payment Method\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": true
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Order Management Flow",
+    "name": "8f775428-2df2-4618-aeec-84b10c4827c5"
+  }, {
+    "condition": "$session.params.operation = \"Manage Account\" OR $session.params.operation = \"Loyalty Points\" OR $session.params.operation = \"Replace Card\" OR $session.params.operation = \"Reset Password\" OR $session.params.operation = \"Update Address\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": true
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Account Management Flow",
+    "name": "ef6fb1e8-35ba-4e31-98cf-edc5745c4f47"
+  }, {
+    "condition": "$session.params.operation = \"Purchase Item\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": true
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Purchase Item Flow",
+    "name": "d442dda6-8b57-4f3c-a413-19baa4d0b491"
+  }, {
+    "condition": "$session.params.operation = \"Search Store\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": true
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      } ]
+    },
+    "targetFlow": "Store Search Flow",
+    "name": "8281bdf2-0c48-4dd5-bb42-8ddd63217642"
+  }, {
+    "condition": "$session.params.is_returning = true AND $session.params.operation_complete = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Is there anything else you need help with?", "Anything else for you today?", "Can I help you with anything else?", "What else can I help you with?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": false
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      }, {
+        "parameter": "search_store_requested",
+        "value": null
+      }, {
+        "parameter": "operation",
+        "value": null
+      }, {
+        "parameter": "has_completed_one_operation",
+        "value": true
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "c51d5e86-786f-4604-925b-5402af4a475d"
+  }, {
+    "condition": "$session.params.operation_complete = false AND $session.params.is_returning = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_returning",
+        "value": false
+      }, {
+        "parameter": "operation_complete",
+        "value": false
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "dad62edb-dfb5-4408-aaad-54e77058e7d4"
+  } ]
+}

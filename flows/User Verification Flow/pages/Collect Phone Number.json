@@ -1,0 +1,133 @@
+{
+  "name": "66b60e92-7ce6-4547-adcc-2c0bb9c328b5",
+  "displayName": "Collect Phone Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What's the phone number you used for registration? You can say it, or enter it into the keypad, followed by pound.", "I didn't catch that. Could you give me the phone number we have on file for your account? You can either say it, or type it into the keypad, followed by pound.", "I didn’t get that. May I have the phone number associated with your account? You can say it, or enter it into the keypad, followed by pound." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "c793005d-7ffb-4f38-ae43-ce619cc2c9a2"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What's the phone number you used for registration? You can say it, or enter it into the keypad, followed by pound.", "I didn't catch that. Could you give me the phone number we have on file for your account? You can either say it, or type it into the keypad, followed by pound.\n", "I didn’t get that. May I have the phone number associated with your account? You can say it, or enter it into the keypad, followed by pound." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "e3b6b50b-ad56-4781-b955-0943955f2f1b"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8ce64547-10e1-4969-9678-68197f85b55f"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What's the phone number you used for registration? You can say it, or enter it into the keypad, followed by pound.", "Sorry, I am unable to hear you. Could you give me the phone number we have on file for your account? You can either say it, or type it into the keypad, followed by pound.", "Sorry, I could not hear you. May I have the phone number associated with your account? You can say it, or enter it into the keypad, followed by pound." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "fed392e5-1d04-4a3f-b49c-e6280136c9e0"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What's the phone number you used for registration? You can say it, or enter it into the keypad, followed by pound.", "Sorry, I am unable to hear you. Could you give me the phone number we have on file for your account? You can either say it, or type it into the keypad, followed by pound.", "Sorry, I could not hear you. May I have the phone number associated with your account? You can say it, or enter it into the keypad, followed by pound." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "a7d8305c-8eae-42ad-a63f-ff1b0d1d7260"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "899f7a29-491c-4508-99ab-47df3fce910a"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "May I have the phone number associated with your account? You can say it, or enter it into the keypad, followed by pound.", "Could you give me the phone number we have on file for your account? You can either say it, or type it into the keypad, followed by pound.", "I'll need the phone number that you used to register your account. You can either say it, or type it into the keypad, followed by pound.", "What's the phone number you used for registration? You can say it, or enter it into the keypad, followed by pound.", "May I have the phone number you used to register your account with us? You can say it, or enter it into the keypad, followed by pound." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Verify Phone Number",
+    "name": "60ee64f8-43ad-4c77-83da-f689630dd000"
+  } ]
+}

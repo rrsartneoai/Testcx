@@ -1,0 +1,236 @@
+{
+  "name": "4eacd487-0f9d-4e89-a100-85755afdc46d",
+  "tags": [ "#switchflows", "#orders", "#editorder", "#orderstatus" ],
+  "displayName": "Error handling - Switch Flows from credit card collection to checking the status of an order",
+  "notes": "User is in the credit card collection for edit payment method and switches to the check order status flow. ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi I would like to change the credit card I used to buy the Pixel 5"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "retail.edit_order_payment_method_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Happy to assist!" ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "First, let me verify your account details." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Is the phone number you're calling from the same one that was used with your account?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I've verified your phone number." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_unit": "Pixel 5"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have sent a 4 digit PIN to your phone. May I have the PIN you received? You can either say it or use your keypad." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "3849"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Edit Payment Method",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "3849"
+      },
+      "currentPage": {
+        "name": "Request Card Number",
+        "flow": "Card Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! I have verified your account." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "It looks like the order has not shipped yet, so we can definitely update the payment method. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Could you tell me your card number? You can either say it, or type it into the keypad, followed by the pound key." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Card Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Actually can I check the status of my order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "3849"
+      },
+      "triggeredIntent": {
+        "name": "retail.check_order_status_initiate"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you with that. " ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "Looks like that order will be delivered tomorrow." ],
+        "allowPlaybackInterruption": true
+      }, {
+        "text": [ "What else can I help you with?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "That's all thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": "3849"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no_thats_all"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Glad I could help! Thank you for calling. Bye!" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607557739,
+    "nanos": 683981000
+  }
+}

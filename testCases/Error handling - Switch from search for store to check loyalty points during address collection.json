@@ -1,0 +1,192 @@
+{
+  "name": "d0f32abc-ff90-43d2-be80-d4b50855be26",
+  "tags": [ "#search", "#points", "#switchflows" ],
+  "displayName": "Error handling - Switch from search for store to check loyalty points during address collection",
+  "notes": "Verifies that the user can successfully check their loyalty points after first requesting to search for a store. The switch occurs before the user provides an address to search from.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Good day! What can I do for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm looking for a store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help look that up for you." ]
+      }, {
+        "text": [ "What's your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Actually can I check my loyalty points"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "is_returning": true,
+        "operation": "Loyalty Points"
+      },
+      "triggeredIntent": {
+        "name": "retail.account_loyalty_points_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number you're calling from the same one registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "is_returning": true,
+        "operation": "Loyalty Points"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I've verified your phone number." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "is_returning": true,
+        "operation": "Loyalty Points"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_guest": false,
+        "is_logged_in": true
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks! I've verified your account." ]
+      }, {
+        "text": [ "Your balance is 1230." ]
+      }, {
+        "text": [ "What else can I help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605809614,
+    "nanos": 510993000
+  }
+}

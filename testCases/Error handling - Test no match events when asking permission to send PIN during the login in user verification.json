@@ -1,0 +1,171 @@
+{
+  "name": "6067b8c2-519d-40ed-a9f2-d88c15dfd768",
+  "tags": [ "#nomatch", "#orders", "#returnorder" ],
+  "displayName": "Error handling - Test no match events when asking permission to send PIN during the login in user verification",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi can I return the stadia controller I ordered"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Stadia Controller"
+      },
+      "triggeredIntent": {
+        "name": "retail.return_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can definitely look into that. " ]
+      }, {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Are you calling from the same number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Stadia Controller"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I've verified your phone number." ]
+      }, {
+        "text": [ "I'll need to authenticate you. Can I send a PIN to your phone? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Why do you robots never understand context"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Stadia Controller"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I didn’t get that. I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Radio on"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Stadia Controller"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I didn't catch that. Can I send a PIN to your phone? Standard message charges may apply." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Volume up"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_unit": "Stadia Controller"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "It seems I’m having a problem understanding you." ]
+      }, {
+        "text": [ "Let me transfer you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607536849,
+    "nanos": 283471000
+  }
+}

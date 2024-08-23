@@ -1,0 +1,351 @@
+{
+  "name": "28359525-543c-4c25-b72b-606f7308b15c",
+  "tags": [ "#switchflows", "#orders", "#orderstatus", "#account", "#udpateaddress" ],
+  "displayName": "Error handling - Switch flows from checking order status to updating account address",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I check the status of an order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Check Status",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.check_order_status_initiate"
+      },
+      "currentPage": {
+        "name": "Check Order Number",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you with that. " ]
+      }, {
+        "text": [ "Can you tell me your order number, please? Alternatively, you can type it in and press pound." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Actually I would like to update my address on file"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.update_account_address_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Are you calling from the same number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "Could you please give me the PIN you received? You can say it or enter it into the keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "3890"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation_complete": false,
+        "pin_number": "3890"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! I have verified your account." ]
+      }, {
+        "text": [ "Before I change your address, I'll need to verify your old address." ]
+      }, {
+        "text": [ "May I have your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "345 spear street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation_complete": false,
+        "pin_number": "3890"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks, I have verified your old address. I'll just need your new address." ]
+      }, {
+        "text": [ "What is your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1600 amphitheatre parkway"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "location": {
+          "original": "1600 amphitheatre parkway",
+          "street-address": "1600 amphitheatre parkway"
+        },
+        "operation_complete": false,
+        "pin_number": "3890"
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "May I have your zip code? You can say it out loud or type it in." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "94043"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "location": {
+          "original": "1600 amphitheatre parkway",
+          "street-address": "1600 amphitheatre parkway"
+        },
+        "operation_complete": false,
+        "pin_number": "3890",
+        "zip_code": "94043"
+      },
+      "currentPage": {
+        "name": "Confirm New Address",
+        "flow": "Address Update Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I heard 1600 amphitheatre parkway 94043. Is that correct?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Update Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes that is correct"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "pin_number": "3890"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! Your address has been updated." ]
+      }, {
+        "text": [ "Is there anything else you need help with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No thank you"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "pin_number": "3890"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "In that case, thank you for calling. Goodbye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607507465,
+    "nanos": 465346000
+  }
+}

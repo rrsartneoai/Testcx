@@ -1,0 +1,126 @@
+{
+  "name": "76eeec68-4e03-4d18-8610-dad6a415ea2b",
+  "displayName": "Check Recent Order",
+  "form": {
+    "parameters": [ {
+      "displayName": "order_unit",
+      "required": true,
+      "entityType": "@order-unit",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. Is this for the most recent order you placed containing the Google Home?", "I didn't catch that. Is this in regards to your recent order of the Google Home?", "I didn’t get that. Is this about the Google Home you purchased recently?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8c5dcf10-f309-4861-b8d2-3b1ed3d48879"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. Is this for the most recent order you placed containing the Google Home?", "I didn't catch that. Is this in regards to your recent order of the Google Home?", "I didn’t get that. Is this about the Google Home you purchased recently?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "546937a9-8bcf-4c5e-bea3-a8dfcb3aee61"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you.", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e020ecef-c19a-4d56-8d23-a154afefcba5"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Is this for the most recent order you placed containing the Google Home?", "Sorry, I am unable to hear you. Is this in regards to your recent order of the Google Home?", "Sorry, I could not hear you. Is this about the Google Home you purchased recently?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d1c0999c-4271-43e9-b508-50898bffac91"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Is this for the most recent order you placed containing the Google Home?", "Sorry, I am unable to hear you. Is this in regards to your recent order of the Google Home?", "Sorry, I could not hear you. Is this about the Google Home you purchased recently?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2776b7ef-8925-433f-bf58-c5af984deeb3"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "66f19e86-1ee7-49f7-a276-22742077fdaf"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Is this for the most recent order you placed containing the Google Home?", "Is this in regards to your recent order of the Google Home?", "Is this about the Google Home you purchased recently?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Order Number",
+    "name": "f73e8de0-1ee4-4f01-b003-a8a281f0f935"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "order_number",
+        "value": "12345"
+      }, {
+        "parameter": "order_unit",
+        "value": "Google Home"
+      } ]
+    },
+    "targetPage": "Order Found",
+    "name": "ec75b5c3-876d-4858-90fb-5222b1bbefad"
+  }, {
+    "condition": "$session.params.order_unit != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Found",
+    "name": "ad37a234-856e-4434-b411-37c81f95d56d"
+  } ]
+}

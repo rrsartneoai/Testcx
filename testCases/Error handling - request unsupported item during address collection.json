@@ -1,0 +1,105 @@
+{
+  "name": "62176c1f-4902-4ba9-bcc4-bfdb43439a25",
+  "tags": [ "#search", "#purchase" ],
+  "displayName": "Error handling - request unsupported item during address collection",
+  "notes": "Verifies that if the user starts a search for a nearby store, and then asks to purchase an unsupported item, then the agent responds appropriately with an error message. The agent stays on the same page and re-prompts the user. The user asks for the invalid item at the start of address collection.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual retail agent. I can help you manage your account, check on your orders, search for stores, and purchase items. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm looking for a store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Let me look that up for you." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'd like to buy a PlayStation"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.unsupported_item_request"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'm sorry, we don't sell that item." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607362012,
+    "nanos": 750920000
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "name": "87206be3-a2a8-4529-b767-f96f0ea26fe7",
+  "displayName": "Confirm Delivery Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.location.zip-code != null",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.location.city != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.zip-code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.city != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.location.zip-code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.zip-code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.zip_code != null",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.location.city != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.zip_code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.admin-area $session.params.zip_code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.city != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.zip_code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.zip_code. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.admin-area. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.location.admin-area. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.admin_area. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            }, {
+              "condition": "$session.params.city != null AND $session.params.admin_area != null",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.admin_area. Is that correct?" ]
+                  },
+                  "languageCode": "en"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Replacement Card Issued",
+    "name": "eb2e02fb-a63d-41f0-8173-f0a56603529d"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Let's try this again.", "Okay, one more time.", "Alright, let's try again." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      }, {
+        "parameter": "city",
+        "value": null
+      }, {
+        "parameter": "admin_area",
+        "value": null
+      }, {
+        "parameter": "zip_code",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Delivery Address Collection",
+    "name": "f6e6b130-66d6-447b-85d5-32aa47d1ece2"
+  } ]
+}

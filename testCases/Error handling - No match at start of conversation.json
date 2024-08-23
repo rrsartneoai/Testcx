@@ -1,0 +1,33 @@
+{
+  "name": "6b57d963-6259-459c-a07e-33a7066bb98f",
+  "tags": [ "#nomatch" ],
+  "displayName": "Error handling - No match at start of conversation",
+  "notes": "Verifies that the no match intent fires at the start of the conversation.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "blah"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Can you say that again?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605050306,
+    "nanos": 970000000
+  }
+}

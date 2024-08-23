@@ -1,0 +1,32 @@
+{
+  "name": "cac805b2-ec65-4976-96f8-e265298ac92c",
+  "displayName": "Collect Shipping Address",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "a6b461f1-729c-4d9c-b36d-bd92d82594eb"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Shipping Address",
+    "name": "6a006173-79f8-4f7f-a5bf-b3afcc494356"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "39009c45-d93c-4db8-a2e0-1be5ec771199"
+  } ]
+}

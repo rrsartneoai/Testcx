@@ -1,0 +1,313 @@
+{
+  "name": "8d53ed76-a790-4e07-a7fd-e596e310afa7",
+  "tags": [ "#orders", "#cancelorder", "#orderstatus", "#switchflows" ],
+  "displayName": "Error handling - Switch from check order status to cancel order",
+  "notes": "Verifies that the user can successfully cancel an existing order after first requesting to check the status of a different order. The switch occurs when the user is asked to provide an order number. When prompted later, the user provides an order number, instead of saying the request is for the most recent order. This also goes through the authentication flow.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual retail agent. I can help you manage your account, check on your orders, search for stores, and purchase items. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I check on my order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Check Status",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.check_order_status_initiate"
+      },
+      "currentPage": {
+        "name": "Check Order Number",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you with that. " ]
+      }, {
+        "text": [ "What is the number for that order? You can also type it in and press pound, if you prefer. " ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Actually can I cancel my order instead"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.cancel_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can definitely look into that. " ]
+      }, {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Is the phone number you're dialing from registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "pin_number": 1234
+      },
+      "currentPage": {
+        "name": "Check Recent Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great! Your account has been verified." ]
+      }, {
+        "text": [ "Is this about the Google Home you purchased recently?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "pin_number": 1234
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Check Order Number",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Just say the order number whenever you are ready. Feel free to type it in and press pound if thats easier." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "12345"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Pixel 5",
+        "pin_number": 1234
+      },
+      "currentPage": {
+        "name": "Cancel Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Let me look that up for you." ]
+      }, {
+        "text": [ "I found the order containing the Pixel 5 Should I go ahead and Cancel that order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "pin_number": 1234
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay I have cancelled the order for you. You should receive a confirmation email in a few minutes." ]
+      }, {
+        "text": [ "Anything else for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607114753,
+    "nanos": 988167000
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "name": "6e820cd3-f62e-43f9-a3a2-b519ed15ea35",
+  "tags": [ "#search", "#orders", "#switchflows", "#cancelorder" ],
+  "displayName": "Error handling - Switch from search for store to cancel order after address collection",
+  "notes": "Verifies that the user can successfully cancel an existing order after first requesting to search for a nearby store. The switch occurs when the user is asked if they would like to hear about store hours. When prompted, the user provides an order number, instead of saying the request is for the most recent order.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual retail agent. I can help you manage your account, check on your orders, search for stores, and purchase items. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm looking for a store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Search Store",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can look that up for you." ]
+      }, {
+        "text": [ "What's your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "345 spear street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation": "Search Store",
+        "operation_complete": false,
+        "store-id": 2,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Ask About Store Hours",
+        "flow": "Store Search Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I found one location at 1600 Amphitheatre Parkway, Mountain View, California 94043." ]
+      }, {
+        "text": [ "Do you want to know the store hours?" ]
+      } ],
+      "currentFlow": {
+        "name": "Store Search Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "On second thought can I cancel an order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "retail.cancel_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you with that. " ]
+      }, {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number associated with your account the same as the one you're dialing in from?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I've verified your phone number." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I have sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "May I have the PIN you received? You can either say it or use your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "pin_number": 1234,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Check Recent Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks! I've verified your account." ]
+      }, {
+        "text": [ "Is this for the most recent order you placed containing the Google Home?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "order_unit": "Pixel 5",
+        "pin_number": 1234,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Check Order Number",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Could you provide me with the order number, please? Alternatively, you can type it in and press pound." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Cancel Order",
+        "operation_complete": false,
+        "order_number": "1234",
+        "order_unit": "Pixel 5",
+        "pin_number": 1234,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Cancel Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Give me a minute to look that up for you" ]
+      }, {
+        "text": [ "I was able to find your order for the Pixel 5. Do you want me to go ahead and Cancel the order?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607108037,
+    "nanos": 825308000
+  }
+}

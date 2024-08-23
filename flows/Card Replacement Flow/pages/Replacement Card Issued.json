@@ -1,0 +1,26 @@
+{
+  "name": "b9d5dfba-fc39-4019-b62f-9afb630abc22",
+  "displayName": "Replacement Card Issued",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your replacement card has been issued. It should arrive in 5 to 7 business days." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "f13ba13d-7156-4ce3-83b4-684e851f2b44"
+  } ]
+}

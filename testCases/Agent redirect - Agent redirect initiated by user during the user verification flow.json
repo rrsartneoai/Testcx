@@ -1,0 +1,76 @@
+{
+  "name": "405f6fb8-1c32-4f00-9144-5fa72181e1c7",
+  "tags": [ "#agentredirect", "#orders", "#returnorder" ],
+  "displayName": "Agent redirect - Agent redirect initiated by user during the user verification flow",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi I want to return an order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.return_order_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Happy to assist!" ]
+      }, {
+        "text": [ "I'll need some account information first." ]
+      }, {
+        "text": [ "Is the phone number associated with your account the same as the one you're dialing in from?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I just talk to an agent"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.agent_hand_off"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll transfer you to one of our representatives." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607536899,
+    "nanos": 597582000
+  }
+}

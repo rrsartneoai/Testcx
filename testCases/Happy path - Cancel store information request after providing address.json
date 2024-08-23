@@ -1,0 +1,133 @@
+{
+  "name": "fc85e8d7-228f-4625-b958-18c9b413b0ef",
+  "tags": [ "#search" ],
+  "displayName": "Happy path - Cancel store information request after providing address",
+  "notes": "This test case starts the process to search for a nearby store. After providing an address and receiving results, it asks to start over, and verifies that the agent goes back to the main menu.\n",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Greetings! How can I assist?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm looking for a store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true,
+        "operation": "Search Store"
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can look that up for you." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "100 main street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "100 main street San Francisco California",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store",
+        "store-id": 2,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Ask About Store Hours",
+        "flow": "Store Search Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I found one location at 1600 Amphitheatre Parkway, Mountain View, California 94043." ]
+      }, {
+        "text": [ "Do you want to know the store hours?" ]
+      } ],
+      "currentFlow": {
+        "name": "Store Search Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Never mind"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "triggeredIntent": {
+        "name": "small_talk.start_over"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "That's fine." ]
+      }, {
+        "text": [ "Can I help you with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606689948,
+    "nanos": 80229000
+  }
+}

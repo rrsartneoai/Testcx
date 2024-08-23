@@ -1,0 +1,390 @@
+{
+  "name": "b0e7686b-8777-445e-86d8-028c3ab80535",
+  "tags": [ "#switchflows", "#account", "#updateaddress", "#orders", "#returnorder" ],
+  "displayName": "Error handling - Switch flows from update address flow to return order after new address in entered",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can you help me update my address"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.update_account_address_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Are you calling from the same number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Update Address",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "May I have the PIN you received? You can either say it or use your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "4783"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I was able to verify your account." ]
+      }, {
+        "text": [ "I'll need to verify your old address before I can change it." ]
+      }, {
+        "text": [ "May I have your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1600 amphitheatre parkway"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "location": {
+          "original": "1600 amphitheatre parkway",
+          "street-address": "1600 amphitheatre parkway"
+        },
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What's your zip code? You can say it or type it on your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "94043"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks, I've verified your old address. Next, I'll need your new address." ]
+      }, {
+        "text": [ "Can I get your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "345 spear street San Francisco California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "location": {
+          "admin-area": "California",
+          "city": "San Francisco",
+          "original": "345 spear street San Francisco California",
+          "street-address": "345 spear street"
+        },
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "currentPage": {
+        "name": "Confirm New Address",
+        "flow": "Address Update Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I heard 345 spear street San Francisco California. Is that correct?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Update Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I actually want to return an order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "triggeredIntent": {
+        "name": "retail.return_order_initiate"
+      },
+      "currentPage": {
+        "name": "Check Recent Order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Happy to assist!" ]
+      }, {
+        "text": [ "Is this in regards to your recent order of the Google Home?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes it is"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Return Order",
+        "operation_complete": false,
+        "order_number": "12345",
+        "order_unit": "Google Home",
+        "pin_number": "4783"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Return order",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Looks like the Google Home is eligible to be returned. Let me start the return process for you. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Original payment"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "triggeredIntent": {
+        "name": "retail.return.original_payment"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, I’ve created a shipping label and emailed it to you. Please print the shipping label and use the attached instructions to start your return. You will receive a refund once we’ve received your item." ]
+      }, {
+        "text": [ "What else can I help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Nothing else thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": false,
+        "operation_complete": false,
+        "pin_number": "4783"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no_thats_all"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I hope you were satisfied with our service today. Thanks and goodbye!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607495069,
+    "nanos": 497107000
+  }
+}

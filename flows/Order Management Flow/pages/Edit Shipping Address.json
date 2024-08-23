@@ -1,0 +1,46 @@
+{
+  "name": "dab27992-da18-4267-b2fe-64c9bb2bee12",
+  "displayName": "Edit Shipping Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The order has not shipped yet, so I can update the shipping address for you.", "Looks like the order is still processing, so I am able to update the shipping address for you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "346f4077-14fb-44af-bfc5-8ab77409da1c"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I have updated your shipping address. You should receive an email confirmation of this change. ", "You shipping address has been updated. You should receive an email confirmation of this change in a few minutes." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "150eb102-c880-4dea-b843-7bc43a33daee"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "e87ed4a9-e959-4dac-84f7-e989ab858710"
+  } ]
+}

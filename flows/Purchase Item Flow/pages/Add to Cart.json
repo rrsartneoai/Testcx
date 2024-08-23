@@ -1,0 +1,216 @@
+{
+  "name": "4f7e0b02-bba1-4504-b749-f7b96eb2cf97",
+  "displayName": "Add to Cart",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.extract.add_item_cart",
+    "condition": "$session.params.cart != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great, I have added a $session.params.order_unit to the cart for you.", "I have added a $session.params.order_unit to your cart. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cart",
+        "value": "$session.params.cart, $session.params.order_unit"
+      } ]
+    },
+    "name": "ffcc5efe-5aab-41f4-a567-8b743117a2de"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "condition": "$session.params.cart != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, let's go ahead and begin checkout.", "Alright, I'll start the checkout process.", "Sounds good! Let's start with checkout." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Cart Checkout",
+    "name": "0ff4a3a5-5701-44df-8d6f-025512fb50b8"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "condition": "$session.params.cart = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm No Purchase",
+    "name": "458a340a-4dd7-465e-b4b5-8c6e1b3783c9"
+  }, {
+    "intent": "small_talk.confirmation.ready_to_checkout",
+    "condition": "$session.params.cart != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, let's go ahead and begin checkout.", "Alright, I'll start the checkout process.", "Sounds good! Let's get you checked out." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Cart Checkout",
+    "name": "c6585117-fae5-4cec-854f-ffc4aa19ca88"
+  }, {
+    "intent": "small_talk.confirmation.ready_to_checkout",
+    "condition": "$session.params.cart = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm No Purchase",
+    "name": "0705f4af-d6d2-4602-a662-ccac30e9eda2"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, just let me know when you're ready.", "Okay, I can wait. Let me know when you're ready.", "No problem! Just speak up when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Wait",
+    "name": "1c465c67-1960-4049-bd3f-676c6c87bbf1"
+  }, {
+    "intent": "retail.extract.add_item_cart",
+    "condition": "$session.params.cart = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I have added a $session.params.order_unit to your cart.", "Great, I have added a $session.params.order_unit to the cart for you." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cart",
+        "value": "$session.params.order_unit"
+      } ]
+    },
+    "name": "530a0436-e699-4a4c-b4d5-e70207d575a1"
+  }, {
+    "intent": "retail.items_for_sale",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can order items such as the Pixel 5, a Nest Thermostat, and a Google Home.", "You can buy items such as a Google Home, a Chromecast, or the new Stadia Controller.", "We have items such as Chromecasts, Google Homes, and Nest thermostats." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ba19f080-1dfc-427a-a4d8-a179832e87f1"
+  }, {
+    "intent": "retail.unsupported_single_item",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6007eb90-946b-46ab-8e55-89590e09f5ab"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9ae45c46-5348-4bca-9bd4-12e7a74a7003"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "09307f5c-0f14-4460-a59d-b036864308b2"
+  }, {
+    "condition": "$session.params.order_unit = null AND $session.params.cart = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "What would you like to order?", "What can I help you purchase today?", "What would you like to buy?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ddd1ebfb-939b-49dd-9450-e5ec5895d7da"
+  }, {
+    "condition": "$session.params.order_unit != null AND $session.params.cart = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I have added a $session.params.order_unit to your cart." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cart",
+        "value": "$session.params.order_unit"
+      } ]
+    },
+    "name": "d04dee15-488b-4ce7-b8f8-68a4cea364a9"
+  }, {
+    "condition": "$session.params.cart != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "What else would you like to order?", "Can I help your order anything else?", "Is there anything else you would like to purchase?", "What else would you like to buy today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5c19bda7-3cea-4962-a674-cbf570ef9fcb"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I missed what you said. You can buy Google devices such as Chromecasts and Google Homes. What do you want to purchase?", "I didn't get that. You can purchase Google devices such as Nest thermostats and Pixel phones. What would you like?", "Sorry, what was that? You can purchase Google products such as Pixel phones or the new Stadia controller.", "Can you say that again? We have Google products such as Google Homes and Pixel phones for sale.", "One more time? We have Google devices such as Chromecasts and Nest thermostats available." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "158d6552-9bd6-4fd3-a2eb-1f347da52d40"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. You can purchase Google devices such as Nest thermostats and Pixel phones. What would you like?", "I missed what you said. You can buy Google devices such as Chromecasts and Google Homes. What do you want to purchase?", "Sorry, what was that? You can purchase Google products such as Pixel phones or the new Stadia controller.", "Can you say that again? We have Google products such as Google Homes and Pixel phones for sale.", "One more time? We have Google devices such as Chromecasts and Nest thermostats available." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8586b667-fd5e-4bb8-9d04-4c4817aeaed8"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I missed what you said. You can buy Google devices such as Chromecasts and Google Homes. What do you want to purchase?", "I am having trouble hearing you. You can purchase Google devices such as Nest thermostats and Pixel phones. What would you like?", "Sorry, what was that? You can purchase Google products such as Pixel phones or the new Stadia controller.", "Sorry, I am unable to hear you. We have Google products such as Google Homes and Pixel phones for sale.", "Sorry, I could not hear you. We have Google devices such as Chromecasts and Nest thermostats available." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "12f59d75-774b-4c52-a1f7-2917473a3d08"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I missed what you said. You can buy Google devices such as Chromecasts and Google Homes. What do you want to purchase?", "I am having trouble hearing you. You can purchase Google devices such as Nest thermostats and Pixel phones. What would you like?", "Sorry, what was that? You can purchase Google products such as Pixel phones or the new Stadia controller.", "Sorry, I am unable to hear you. We have Google products such as Google Homes and Pixel phones for sale.", "Sorry, I could not hear you. We have Google devices such as Chromecasts and Nest thermostats available." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c3434335-d3ad-473c-b6ec-c4d03a37dc63"
+  } ]
+}

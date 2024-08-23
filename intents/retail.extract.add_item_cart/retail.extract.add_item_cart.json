@@ -1,0 +1,14 @@
+{
+  "name": "77245a58-836a-4708-bfe4-201ae5f7009e",
+  "displayName": "retail.extract.add_item_cart",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 55
+}

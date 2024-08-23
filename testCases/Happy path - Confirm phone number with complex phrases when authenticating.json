@@ -1,0 +1,107 @@
+{
+  "name": "67fc7bc6-496c-4b81-be3a-bbf67519d944",
+  "tags": [ "#resetpassword" ],
+  "displayName": "Happy path - Confirm phone number with complex phrases when authenticating",
+  "notes": "Verifies that the user can use more complex phrases that a simple \"yes\" to verify that they're calling from the phone number associated with their account. This test case uses the reset password flow to start the authentication process.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hello! How can I help you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I forgot my password"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Reset Password",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.reset_account_password_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Is the phone number you're dialing in from registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I think that's the right phone number"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Reset Password",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.correct_phone_number"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks, I have verified your phone number." ]
+      }, {
+        "text": [ "I'll need to authenticate you with a PIN sent to your phone. May I send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606855732,
+    "nanos": 237135000
+  }
+}

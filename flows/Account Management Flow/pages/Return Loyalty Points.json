@@ -1,0 +1,26 @@
+{
+  "name": "57e8efd1-c173-4375-bf47-f1bda74d2f60",
+  "displayName": "Return Loyalty Points",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You have 8100 loyalty points on your account.", "Your account has 2200 loyalty points.", "You have 3402 loyalty points available." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "d7ccb9d1-ebe1-4f83-a0f2-aa36560faae9"
+  } ]
+}

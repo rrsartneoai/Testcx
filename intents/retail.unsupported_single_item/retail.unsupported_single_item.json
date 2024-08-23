@@ -1,0 +1,11 @@
+{
+  "name": "5bddce11-dd24-44fc-8e50-33e7e9594cff",
+  "displayName": "retail.unsupported_single_item",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "description": "Used during the purchase item flow, in case the user provides a single item that isn't supported when prompted.",
+  "numTrainingPhrases": 25
+}

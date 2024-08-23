@@ -1,0 +1,10 @@
+{
+  "name": "d6a391b4-81ed-410e-b4ff-23ad43a1e8c6",
+  "displayName": "retail.return.original_payment",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

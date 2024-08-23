@@ -1,0 +1,124 @@
+{
+  "name": "c7941e8d-4739-4d67-a6c9-f9eef5789f83",
+  "displayName": "Edit Shipping Speed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like the $session.params.order_unit is eligible for expedited shipping, which takes 1 to 2 business days. It will be a $5 additional charge. Would you like to go ahead and process that?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Done! I've updated your order to use expedited shipping.", "Great, I have upgraded you to expedited shipping." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "559efa30-be70-45f4-b5aa-e8029a6ddb53"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay I won't change the shipping speed.", "Sounds good, I will leave the shipping speed as is. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "ae8fd1fd-c1b8-4b4b-a0bc-c8d51aef09b3"
+  }, {
+    "intent": "retail.wrong_order",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "0ff023bf-789a-4927-9af5-990461a2b30c"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Do you want me to expedite shipping for a $5 additional charge?", "I didn't catch that. Would you like me to process the $5 additional charge and expedite shipping?", "I didn’t get that. Do you still want me to expedite shipping for $5?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8e29083d-3c09-493b-9c29-e9f27a29dc2f"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Do you want me to expedite shipping for a $5 additional charge?", "I didn't catch that. Would you like me to process the $5 additional charge and expedite shipping?", "I didn’t get that. Do you still want me to expedite shipping for $5?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8e197107-4ea1-48fc-9a15-8d9f7d053bdb"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Do you want me to expedite shipping for a $5 additional charge?", "Sorry, I am unable to hear you. Would you like me to process the $5 additional charge and expedite shipping?", "Sorry, I could not hear you. Do you still want me to expedite shipping for $5?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "99f7eec3-5749-40c6-822c-7f3839b763ee"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Do you want me to expedite shipping for a $5 additional charge?", "Sorry, I am unable to hear you. Would you like me to process the $5 additional charge and expedite shipping?", "Sorry, I could not hear you. Do you still want me to expedite shipping for $5?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0942ec9d-a1fc-46a6-a7c9-dd109eae9c58"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you.", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "60884c83-158d-49ba-976e-437c002e3765"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "235c0d40-22fc-49cf-897d-8bf94dc0564b"
+  } ]
+}

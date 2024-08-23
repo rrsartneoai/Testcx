@@ -1,0 +1,35 @@
+{
+  "name": "e8bd419d-2c8d-451a-9b6d-456059390899",
+  "displayName": "Cart Checkout",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like your cart has the following, $session.params.cart." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.is_logged_in = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ask to Use Existing Address",
+    "name": "3b498d97-0fd4-42d7-aca9-689d5cacdc1c"
+  }, {
+    "condition": "$session.params.is_logged_in != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I will need to collect your shipping address.", "I'll need your shipping address.", "Next, I'll need a shipping address." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Collect Shipping Address",
+    "name": "8203ecd2-04f8-4cb9-9583-d1b6bea68d74"
+  } ]
+}

@@ -1,0 +1,483 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I placed an order for a Chromecast and need to change the address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I bought a ",
+      "auto": true
+    }, {
+      "text": "Chromecast",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " but it's going to the wrong place",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake in placing my order for a ",
+      "auto": true
+    }, {
+      "text": "Pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I accidentally sent the ",
+      "auto": true
+    }, {
+      "text": "Nest thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order to my office",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I accidentally sent my ",
+      "auto": true
+    }, {
+      "text": "Google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order to the wrong apartment",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I purchased a ",
+      "auto": true
+    }, {
+      "text": "Pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " but it's going to my office instead of my house",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I bought a ",
+      "auto": true
+    }, {
+      "text": "Stadia controller",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " but it's going to my old address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My order is going to the wrong address and I need to change it",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to redirect an order to a new address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could I change the address for my ",
+      "auto": true
+    }, {
+      "text": "Google Home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to make edits to the address I used in an order"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I edit the address on my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to fix the address on my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake in the address for my ",
+      "auto": true
+    }, {
+      "text": "Pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I ordered a ",
+      "auto": true
+    }, {
+      "text": "nest thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " but made a mistake in the shipping address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake with the shipping address for my ",
+      "auto": true
+    }, {
+      "text": "Google Home",
+      "parameterId": "order_unit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I messed up my ",
+      "auto": true
+    }, {
+      "text": "Stadia Controller",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order and need to change the address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to send my ",
+      "auto": true
+    }, {
+      "text": "Pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " order somewhere else",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I used the wrong shipping address can I change it",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake and put the wrong shipping address for my purchase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a purchase but I messed up and put the wrong address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me change the address for an order I made",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake and put the wrong address in my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I bought something but I used the wrong address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I purchased something but it's going to my old address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to update the address for my most recent order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I placed an order but put in the wrong address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to change the address for the ",
+      "auto": true
+    }, {
+      "text": "phone",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " i bought",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the email i got had a different shipping address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the confirmation email had the wrong shipping address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the ",
+      "auto": true
+    }, {
+      "text": "nest",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " i bought is going to the wrong place",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I made a mistake in my street address can you help",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I used the wrong address for my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can i update the street name for man order i placed",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "gave the wrong city name for my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "inputted the wrong street name for my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "ordered the ",
+      "auto": true
+    }, {
+      "text": "pixel",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " to the wrong address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "sent the ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " to the wrong address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "accidentally gave the wrong address for the ",
+      "auto": true
+    }, {
+      "text": "stadia",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " controller",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my ",
+      "auto": true
+    }, {
+      "text": "nest thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " is going to the wrong location",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "shipped my ",
+      "auto": true
+    }, {
+      "text": "pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " to the wrong address, can i update it",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "made a mistake with the shipping address, can i update it",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i just placed an order and would like to change the address",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can i update the address for an order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to change the address i sent an item to",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "is it possible to change the address for an order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can you help me change the shipping address for an order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like edit the shipping address of an item",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i would like to change the shipping address on an order"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I accidentally shipped something to the wrong place can i update the address"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Accidentally ordered something to the wrong address can I update it"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

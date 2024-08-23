@@ -1,0 +1,14 @@
+{
+  "name": "474ecbf6-5cd4-49e1-a99d-3b363a1a8ec0",
+  "displayName": "retail.extract.zip_code",
+  "parameters": [ {
+    "id": "zip_code",
+    "entityType": "@sys.zip-code"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 51
+}

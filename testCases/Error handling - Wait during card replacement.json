@@ -1,0 +1,360 @@
+{
+  "name": "c855cb55-bd70-49f6-b5e4-c68721c9d02a",
+  "tags": [ "#replacecard", "#wait", "#account" ],
+  "displayName": "Error handling - Wait during card replacement",
+  "notes": "Verifies that the user can ask the agent to wait during the card replacement flow. This also tests different ways of restarting the conversation.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true
+      },
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Greetings! How can I assist?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I lost my card"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Replace Card"
+      },
+      "triggeredIntent": {
+        "name": "retail.replace_loyalty_card_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Is the phone number you're calling from the same one that was used with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Replace Card"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Replace Card"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you! I have verified your account." ]
+      }, {
+        "text": [ "To do that, I'll need to verify your delivery address. Is 1600 Amphitheatre Parkway, Mountain View, CA 94043 your current address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Give me a minute"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.wait"
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, just let me know when you're ready." ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Okay I'm ready"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.ready"
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great!" ]
+      }, {
+        "text": [ "To do that, I'll need to verify your delivery address. Is 1600 Amphitheatre Parkway, Mountain View, CA 94043 your current address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Give me a minute"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.wait"
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "No problem! Just speak up when you're ready." ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Are you still there"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.still_there"
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Don't worry, I'm here." ]
+      }, {
+        "text": [ "To do that, I'll need to verify your delivery address. Is 1600 Amphitheatre Parkway, Mountain View, CA 94043 your current address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Give me a minute"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.wait"
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure, just let me know when you're ready." ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Your replacement card has been issued. It should arrive in 5 to 7 business days." ]
+      }, {
+        "text": [ "Anything else for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605914748,
+    "nanos": 8363000
+  }
+}

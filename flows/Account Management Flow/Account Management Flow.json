@@ -1,0 +1,193 @@
+{
+  "name": "f4fdde4a-95ec-480c-8aeb-4bb2329a9b7c",
+  "displayName": "Account Management Flow",
+  "transitionRoutes": [ {
+    "intent": "small_talk.agent_hand_off",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "84b30723-a3c7-4bed-b073-b61aefed2555"
+  }, {
+    "intent": "small_talk.start_over",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay.", "Alright.", "Understood." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "83d87391-b737-41da-bf7a-e98cf49407d0"
+  }, {
+    "intent": "retail.cancel_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Cancel Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "0c6c9521-6ab1-486b-9b4a-aae66f64d796"
+  }, {
+    "intent": "retail.check_order_status_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Check Status"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "9aaf9326-49c7-403d-93e8-bca8253f98ce"
+  }, {
+    "intent": "retail.edit_order_shipping_speed_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Speed"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "b573a116-0aa7-4945-89b8-c280391939cf"
+  }, {
+    "intent": "retail.edit_order_payment_method_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Payment Method"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "e9aa9034-926e-4f8a-b868-1f30c3b69d48"
+  }, {
+    "intent": "retail.return_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Return Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "358e9e1a-5081-4642-93a5-954a49555f4b"
+  }, {
+    "intent": "retail.edit_shipping_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Address"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "49766ec2-6088-4e91-be63-5a397e0cbbb8"
+  }, {
+    "intent": "retail.purchase_item_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Purchase Item"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "4777f8e1-2cc4-4069-b9cc-4163df5ee244"
+  }, {
+    "intent": "retail.nearest_store_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Search Store"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "33422290-1d5a-47e0-a793-cb1d24bc44a9"
+  }, {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Great!", "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "1821911b-0114-4d66-8e32-09357a00b249"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, just let me know when you're ready.", "Okay, I can wait. Let me know when you're ready.", "No problem! Just speak up when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "48a3d187-4427-433f-9853-b738cb6a4d1a"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here!", "I'm here!", "Don't worry, I'm here.", "Don't worry, I'm still here." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0815f01e-d36b-423b-a017-91081ab50c60"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "7edac89d-c9d3-410d-b66c-7d9a5a981df9"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Caller Verification",
+    "name": "8e94e192-c466-4fa1-91ff-4c96e61d7ae3"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3347580f-956d-4159-9465-902dcb10f1fa"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9d2dda07-e1d4-49cd-b73b-e68bf93a2dd9"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

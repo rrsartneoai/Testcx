@@ -1,0 +1,524 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Looks like my order won't get here in time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " will not get here in time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "expedite ",
+      "auto": true
+    }, {
+      "text": "pixel",
+      "parameterId": "order_unit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Need to expedite ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Expedite order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Help expedite order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Help expedite shipment",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Help increase shipping speed"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me with getting the ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " sooner",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need some help getting the ",
+      "auto": true
+    }, {
+      "text": "Pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " delivered faster",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need your assistance increasing shipping speed",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me expedite shipping",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you ship the "
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " faster than "
+    }, {
+      "text": "5",
+      "auto": true
+    }, {
+      "text": " business days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "3 to 5 days is a lot to wait on my ",
+      "auto": true
+    }, {
+      "text": "pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " I need it sooner",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get the "
+    }, {
+      "text": "thermostat",
+      "parameterId": "order_unit"
+    }, {
+      "text": " sooner than 3 to 5 days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Just noticed the deliver date is too late",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The ",
+      "auto": true
+    }, {
+      "text": "pixel",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " needs to get here quicker",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there a way to get the ",
+      "auto": true
+    }, {
+      "text": "stadia controller",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " here any faster",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Increase speed of shipping",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Trying to increase shipping speed",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please expedite shipping",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It would be nice to get the ",
+      "auto": true
+    }, {
+      "text": "nest thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " earlier",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do i make the ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " ship faster",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Make shipping faster",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Change shipping method",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Edit shipping speed"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Faster shipping please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Expedite shipping"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "trying to expedite the ",
+      "auto": true
+    }, {
+      "text": "pixel 5",
+      "parameterId": "order_unit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the estimated arrival of my package is too late",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "my order is taking too long to arrive",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can the ",
+      "auto": true
+    }, {
+      "text": "thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " be shipped by the end of the week",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "is it possible to get the ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " delivered ",
+      "auto": true
+    }, {
+      "text": "before next week"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i need the ",
+      "auto": true
+    }, {
+      "text": "phone",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " to arrive before ",
+      "auto": true
+    }, {
+      "text": "the 25th"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the ",
+      "auto": true
+    }, {
+      "text": "nest thermostat",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " wont arrive in time for our anniversary",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can i speed up delivery of the ",
+      "auto": true
+    }, {
+      "text": "google home",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " i ordered",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want to expedite my previous purchase",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "is it possible to expedite my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i need my ",
+      "auto": true
+    }, {
+      "text": "phone",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " delivered within ",
+      "auto": true
+    }, {
+      "text": "the next couple of days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can i get my ordered delivered sooner",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "looks like my order won't arrive on time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i need my ",
+      "auto": true
+    }, {
+      "text": "phone",
+      "parameterId": "order_unit",
+      "auto": true
+    }, {
+      "text": " earlier",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Change shipping speed",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to increase the shipping speed for my "
+    }, {
+      "text": "phone",
+      "parameterId": "order_unit"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need my "
+    }, {
+      "text": "nest thermostat",
+      "parameterId": "order_unit"
+    }, {
+      "text": " to arrive by Christmas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i need my order to arrive by ",
+      "auto": true
+    }, {
+      "text": "next week"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My order wont make it on time for my sons birthday",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "looks like my order wont be delivered on time",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i want the "
+    }, {
+      "text": "stadia",
+      "parameterId": "order_unit"
+    }, {
+      "text": " delivered faster"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "is it possible to change the shipping speed of the "
+    }, {
+      "text": "pixel 5",
+      "parameterId": "order_unit"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can i change the shipping speed for an order"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to get my "
+    }, {
+      "text": "pixel 5",
+      "parameterId": "order_unit"
+    }, {
+      "text": " sooner please"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would like to change the shipping speed for my order",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

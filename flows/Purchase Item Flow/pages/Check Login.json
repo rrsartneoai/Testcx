@@ -1,0 +1,50 @@
+{
+  "name": "7a8d0eae-caa7-4d87-ad24-6d8b42eb3771",
+  "displayName": "Check Login",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Of course, I am happy to assist with that. Do you have an account you would like to login to, or would you prefer to continue as a guest?", "Of course, I am happy to assist with that. Would you like to login or continue as a guest?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.user_login",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "User Verification Flow",
+    "name": "ee99f8eb-03bd-46a0-8154-f54632fff5dd"
+  }, {
+    "intent": "small_talk.confirmation.proceed_as_guest",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "is_logged_in",
+        "value": false
+      } ]
+    },
+    "targetPage": "Add to Cart",
+    "name": "b8054840-e889-4e13-b373-202ccc0b5b48"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "4b1c8ff6-9aab-4e96-8722-c450d5a55e18"
+  }, {
+    "condition": "$session.params.is_logged_in = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add to Cart",
+    "name": "2ef2aaa9-8c4a-41ee-913a-c6aeb3219003"
+  } ]
+}

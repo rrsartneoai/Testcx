@@ -1,0 +1,242 @@
+{
+  "name": "1fd53a1e-7ff8-4931-a131-ae404e685cc3",
+  "tags": [ "#account", "#manageaccount", "#agentredirect" ],
+  "displayName": "Error handling - No Input test for Manage Account Page",
+  "notes": "Verifies that the no input fallbacks work when the user is at the Manage Account Page. Third no input triggers agent redirect. ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi I need help with my account"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.manage_account_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I'll need to verify your account first." ]
+      }, {
+        "text": [ "Is the phone number you're calling from the same one registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes it is"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it? Standard message charges may apply." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "allow_guest_login": false,
+        "has_welcomed_user": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent you a 4 digit PIN." ]
+      }, {
+        "text": [ "Could you please give me the PIN you received? You can say it or enter it into the keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5830"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false,
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Manage Account",
+        "flow": "Account Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great! Your account has been verified." ]
+      }, {
+        "text": [ "How can I assist you with your account? " ]
+      } ],
+      "currentFlow": {
+        "name": "Account Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false,
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Manage Account",
+        "flow": "Account Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I am unable to hear you. What would you like me to do with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "Account Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false,
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "Manage Account",
+        "flow": "Account Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I am unable to hear you. I can help with things like checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?" ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Account Management Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+        
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_welcomed_user": true,
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "operation": "Manage Account",
+        "operation_complete": false,
+        "pin_number": "5830"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn't get that. Let me transfer you to an agent for better assistance." ]
+      }, {
+        "text": [ "Please hold while I transfer you to one of our representatives." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607482337,
+    "nanos": 517845000
+  }
+}

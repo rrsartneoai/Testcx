@@ -1,0 +1,125 @@
+{
+  "name": "95232253-64f8-4945-8ca6-3897e3faf161",
+  "displayName": "Request User Location",
+  "form": {
+    "parameters": [ {
+      "displayName": "location",
+      "required": true,
+      "entityType": "@sys.location",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What is your street address?", "I didn't catch that. May I have your street address?", "I didn’t get that. Can I get your street address?", "I didn’t understand that. Can you repeat your street address? " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "526bb75e-ffec-451b-a625-e539b17f1d28"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What is your street address?", "I didn't catch that. May I have your street address?", "I didn’t get that. Can I get your street address?", "I didn’t understand that. Can I get your street address? ", "I didn’t understand that. May I have your street address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "12006cf2-c0c9-45aa-bb3b-d1fef6c50bab"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2bfdca34-8944-44c5-b719-b4b837aaa0ca"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is your street address?", "Sorry, I am unable to hear you. May I have your street address?", "Sorry, I could not hear you. Can I get your street address?", "I didn't get that. May I have your street address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2ccf4885-771e-484c-947f-fa4d2d17654c"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is your street address?", "Sorry, I am unable to hear you. May I have your street address?", "Sorry, I could not hear you. Can I get your street address?", "I didn't get that. May I have your street address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "64f127a2-94ea-403c-956a-6b0609795a82"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "1611e067-f056-4899-9bad-643361d96a7a"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Could you please provide me with your street address? ", "What is your street address?", "Can I get your street address?", "May I have your street address?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Current Page",
+    "name": "b8c3b7ac-7312-4dbf-806c-ad5ad31a3123"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I cannot help without an address. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "b47ab79d-8c5a-41ca-a660-eab1a32ddbb5"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Address Components",
+    "name": "b225b10d-428d-4a5e-9f52-06608430828c"
+  } ]
+}

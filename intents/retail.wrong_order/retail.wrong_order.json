@@ -1,0 +1,15 @@
+{
+  "name": "ecec5141-2eb3-412c-b5d7-91c65d35551f",
+  "displayName": "retail.wrong_order",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit",
+    "isList": true
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 51
+}

@@ -1,0 +1,194 @@
+{
+  "name": "93fb2c02-b35d-4a13-b2db-55b56281c434",
+  "tags": [ "#purchase", "#replacecard", "#switchflows", "#account" ],
+  "displayName": "Error handling - Switch from replace card to purchase item after authenticating",
+  "notes": "Verifies that the user can successfully purchase an item after first requesting to replace their loyalty card. The switch occurs after the user enters a PIN, but before they confirm the replacement request.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Greetings! How can I assist?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I lost my card"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_management_reason": "Replace Card",
+        "allow_guest_login": false,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "retail.replace_loyalty_card_initiate"
+      },
+      "currentPage": {
+        "name": "Clarify Phone Number",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "First, let me verify your account details." ]
+      }, {
+        "text": [ "Is this the same phone number that's registered with your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_management_reason": "Replace Card",
+        "allow_guest_login": false,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Request to send PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, your phone number has been verified." ]
+      }, {
+        "text": [ "I'll need to send you a PIN to authenticate you. Would you like me to send it?" ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "account_management_reason": "Replace Card",
+        "allow_guest_login": false,
+        "is_returning": true
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Collect PIN",
+        "flow": "User Verification Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I've sent a 4 digit PIN to your phone." ]
+      }, {
+        "text": [ "Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      } ],
+      "currentFlow": {
+        "name": "User Verification Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true
+      },
+      "currentPage": {
+        "name": "Verify Delivery Address",
+        "flow": "Card Replacement Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great! Your account has been verified." ]
+      }, {
+        "text": [ "To do that, I'll need to verify your delivery address. Is 1600 Amphitheatre Parkway, Mountain View, CA 94043 your current address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Card Replacement Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I buy something instead"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_guest": false,
+        "is_logged_in": true,
+        "is_returning": true,
+        "reset": true
+      },
+      "triggeredIntent": {
+        "name": "retail.purchase_item_initiate"
+      },
+      "currentPage": {
+        "name": "Add to Cart",
+        "flow": "Purchase Item Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course, I am happy to assist with that. " ]
+      }, {
+        "text": [ "What can i help you purchase today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Purchase Item Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605807905,
+    "nanos": 783976000
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "3317e851-47e8-4b7b-9c53-80864b80da4b",
+  "displayName": "small_talk_confirmation.cancel",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "description": "Used in the cancel order flow. This detects that the user would like to cancel the order, but said more than a simple \"yes\".",
+  "numTrainingPhrases": 19
+}

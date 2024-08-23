@@ -1,0 +1,68 @@
+{
+  "name": "36c78b9d-9728-4c59-86c4-78c32f082eae",
+  "displayName": "Confirm Billing Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Can you please confirm the last 4 digits of the card on file?", "To complete the process could you please confirm the last 4 digits of the card on file?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.extract.credit_card_last_four",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Placed",
+    "name": "888f3eb1-6e56-4b38-89d6-dd4b7089552a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Can you please confirm the last 4 digits of the card on file?", "I didn't catch that. Could you please provide the last 4 digits of the credit card on file?", "I didn’t get that. To complete the process could you please confirm the last 4 digits of the card on file?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7058dd1a-33dc-4ba0-9248-4e04df0abe6c"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Can you please confirm the last 4 digits of the card on file?", "I didn't catch that. Could you please provide the last 4 digits of the credit card on file?", "I didn’t get that. To complete the process could you please confirm the last 4 digits of the card on file?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4b82e212-208e-4d54-b50d-f35606033ead"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you please confirm the last 4 digits of the card on file?", "Sorry, I am unable to hear you. Could you please provide the last 4 digits of the credit card on file?", "Sorry, I could not hear you. To complete the process could you please confirm the last 4 digits of the card on file?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e216ecc4-0e90-4d9e-8824-28eaee346055"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you please confirm the last 4 digits of the card on file?", "Sorry, I am unable to hear you. Could you please provide the last 4 digits of the credit card on file?", "Sorry, I could not hear you. To complete the process could you please confirm the last 4 digits of the card on file?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ff940185-3686-4121-8048-97d801496e76"
+  } ]
+}

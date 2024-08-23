@@ -1,0 +1,30 @@
+{
+  "name": "5f7fd475-424c-45ba-b794-11b98f2a033a",
+  "displayName": "Account Verified",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thanks! I've verified your account.", "Alright, I was able to verify your account.", "Thank you! I have verified your account.", "Great! Your account has been verified." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "is_logged_in",
+      "value": true
+    }, {
+      "parameter": "is_guest",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "5b3fbb5a-5f2c-4356-911e-d647e53e8dd0"
+  } ]
+}

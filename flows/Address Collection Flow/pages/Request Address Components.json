@@ -1,0 +1,32 @@
+{
+  "name": "b1f20655-7066-4805-b2a3-d239a4273005",
+  "displayName": "Request Address Components",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location.zip-code != null OR $session.params.zip_code != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "46a9526e-492f-41ff-b3b1-c1b5ba68999b"
+  }, {
+    "condition": "$session.params.location.zip-code = null AND $session.params.zip_code = null AND ($session.params.location.city = null OR $session.params.location.admin-area = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Zip Code",
+    "name": "305e5260-e0c9-4376-8adf-500c0e643fe5"
+  }, {
+    "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "63b6e393-8c7a-4477-bb86-0f7668fac83c"
+  } ]
+}

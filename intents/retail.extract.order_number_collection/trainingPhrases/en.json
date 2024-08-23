@@ -1,0 +1,593 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "I found the ",
+      "auto": true
+    }, {
+      "text": "email",
+      "auto": true
+    }, {
+      "text": " with the order number ",
+      "auto": true
+    }, {
+      "text": "3939",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here it's in my ",
+      "auto": true
+    }, {
+      "text": "email",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "3425",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I got a ",
+      "auto": true
+    }, {
+      "text": "text message",
+      "auto": true
+    }, {
+      "text": " with the number ",
+      "auto": true
+    }, {
+      "text": "39292",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have it in my ",
+      "auto": true
+    }, {
+      "text": "email",
+      "auto": true
+    }, {
+      "text": " it's ",
+      "auto": true
+    }, {
+      "text": "2932",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "If I remember correctly it's ",
+      "auto": true
+    }, {
+      "text": "39239",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you try ",
+      "auto": true
+    }, {
+      "text": "3929",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "There's a lot of numbers here try ",
+      "auto": true
+    }, {
+      "text": "24293",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I found a number here it's ",
+      "auto": true
+    }, {
+      "text": "23923",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Does this work as a number ",
+      "auto": true
+    }, {
+      "text": "39239",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I found my number ",
+      "auto": true
+    }, {
+      "text": "30400",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here's the number ",
+      "auto": true
+    }, {
+      "text": "00242",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think ",
+      "auto": true
+    }, {
+      "text": "424240",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " is my number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The order number is ",
+      "auto": true
+    }, {
+      "text": "42424",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I found the number ",
+      "auto": true
+    }, {
+      "text": "44402",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I found my number it's ",
+      "auto": true
+    }, {
+      "text": "4402",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "2222",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " is my number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It looks like my order number is ",
+      "auto": true
+    }, {
+      "text": "2222",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "0002392",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " is my number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My number is ",
+      "auto": true
+    }, {
+      "text": "000349",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "This looks like the number ",
+      "auto": true
+    }, {
+      "text": "02302",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Finally found the number it's ",
+      "auto": true
+    }, {
+      "text": "2392",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I found it ",
+      "auto": true
+    }, {
+      "text": "30520",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Does ",
+      "auto": true
+    }, {
+      "text": "3929",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " work",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Does ",
+      "auto": true
+    }, {
+      "text": "33420",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " look like a valid order number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is this the number ",
+      "auto": true
+    }, {
+      "text": "2303",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think it's ",
+      "auto": true
+    }, {
+      "text": "90233",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " but I'm not sure",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "It's ",
+      "auto": true
+    }, {
+      "text": "39454",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " thank you very much",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "3589",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " is my order number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have found my order number it's ",
+      "auto": true
+    }, {
+      "text": "12356",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here it is I found it it's ",
+      "auto": true
+    }, {
+      "text": "3354776",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My order number was ",
+      "auto": true
+    }, {
+      "text": "6879764",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Reading it now ",
+      "auto": true
+    }, {
+      "text": "33879",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "There's the order number ",
+      "auto": true
+    }, {
+      "text": "11123",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "33468",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " that's my order number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "9976",
+      "parameterId": "order_number",
+      "auto": true
+    }, {
+      "text": " is my order number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm reading here that it's ",
+      "auto": true
+    }, {
+      "text": "3487",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think it's ",
+      "auto": true
+    }, {
+      "text": "223334",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Found the number ",
+      "auto": true
+    }, {
+      "text": "44777",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here's the order number ",
+      "auto": true
+    }, {
+      "text": "33344",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here it is order number ",
+      "auto": true
+    }, {
+      "text": "11133",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The order number is ",
+      "auto": true
+    }, {
+      "text": "112348",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have found my number at last it is ",
+      "auto": true
+    }, {
+      "text": "11122",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "1236",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I found my number it's ",
+      "auto": true
+    }, {
+      "text": "2444",
+      "parameterId": "order_number",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Finally got it the number is "
+    }, {
+      "text": "38385",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here it is "
+    }, {
+      "text": "34839",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Got it "
+    }, {
+      "text": "38345",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Found it the number is "
+    }, {
+      "text": "12354",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The number is "
+    }, {
+      "text": "09257",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "23789",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here is my order number "
+    }, {
+      "text": "89456",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My order number is "
+    }, {
+      "text": "52867",
+      "parameterId": "order_number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

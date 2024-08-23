@@ -1,0 +1,106 @@
+{
+  "name": "2a3fe6a1-c1a9-40b6-b66c-4052c028b858",
+  "displayName": "Request Expiration Year",
+  "form": {
+    "parameters": [ {
+      "displayName": "expiration_year",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What is the expiration year for the card?", "I didn't catch that. Which year does the card expire?", "I didn’t get that. Which year does the card expire?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a1e70f36-9850-4453-94cd-809bb0ddc675"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What is the expiration year for the card?", "I didn't catch that. Which year does the card expire?", "I didn’t get that. Which year does the card expire?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "453be148-fba0-4814-bc8d-d88f677608ae"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you.", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that. " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "fc1b6d41-a400-47f2-88ea-018249a759a2"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is the expiration year for the card?", "Sorry, I am unable to hear you. Which year does the card expire?", "Sorry, I could not hear you. Which year does the card expire?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8cbc8b44-11ae-4654-af62-c735b381f82c"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is the expiration year for the card?", "Sorry, I am unable to hear you. Which year does the card expire?", "Sorry, I could not hear you. Which year does the card expire?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8bd0efe8-c5ca-4b1b-92a2-ef3a1aaca987"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "44a39b94-0a5e-44a1-9764-cb062a8518e5"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What is the expiration year for the card?", "Which year does the card expire?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Zip Code",
+    "name": "30f0f260-9275-455c-8098-13024530e6a3"
+  } ]
+}

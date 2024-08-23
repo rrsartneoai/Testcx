@@ -1,0 +1,199 @@
+{
+  "name": "80f6bd2a-a466-4cec-94c6-743179002699",
+  "tags": [ "#search" ],
+  "displayName": "Happy path - Request to provide city and state instead of zip code",
+  "notes": "This test case searches for a nearby store, provides a street address, and then provides a city name. When prompted for a zip code, instead of providing a code, it politely asks if a city and state will work. After receiving an affirmative answer, the test case sends a valid city and state, and verifies that the expected search results are returned.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Good day! What can I do for you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm searching for a nearby store"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true,
+        "operation": "Search Store"
+      },
+      "triggeredIntent": {
+        "name": "retail.nearest_store_initiate"
+      },
+      "currentPage": {
+        "name": "Request User Location",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Let me look that up for you." ]
+      }, {
+        "text": [ "May I have your street address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "100 main street"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store"
+      },
+      "currentPage": {
+        "name": "Request Zip Code",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What's your zip code? You can say it out loud or type it in." ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Can I just give you my city and state"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store"
+      },
+      "triggeredIntent": {
+        "name": "retail.extract.city_and_admin_area"
+      },
+      "currentPage": {
+        "name": "Request City",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sure!" ]
+      }, {
+        "text": [ "What's the city for that address?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "San Francisco"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "city": "San Francisco",
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store"
+      },
+      "currentPage": {
+        "name": "Request Admin Area",
+        "flow": "Address Collection Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Which state are you in?" ]
+      } ],
+      "currentFlow": {
+        "name": "Address Collection Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "California"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "admin-area": "California",
+        "city": "San Francisco",
+        "is_returning": true,
+        "location": {
+          "original": "100 main street",
+          "street-address": "100 main street"
+        },
+        "operation": "Search Store",
+        "store-id": 2,
+        "stores": [ "1600 Amphitheatre Parkway, Mountain View, California 94043" ]
+      },
+      "currentPage": {
+        "name": "Ask About Store Hours",
+        "flow": "Store Search Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I found one location at 1600 Amphitheatre Parkway, Mountain View, California 94043." ]
+      }, {
+        "text": [ "Should I tell you about the store hours?" ]
+      } ],
+      "currentFlow": {
+        "name": "Store Search Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606689843,
+    "nanos": 332687000
+  }
+}

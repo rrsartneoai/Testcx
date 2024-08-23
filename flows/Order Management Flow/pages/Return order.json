@@ -1,0 +1,136 @@
+{
+  "name": "30ce107c-ce35-4249-be16-6bb05595d7f5",
+  "displayName": "Return order",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like the $session.params.order_unit is eligible to be returned. Let me start the return process for you. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.return.original_payment",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, I’ve created a shipping label and emailed it to you. Please print the shipping label and use the attached instructions to start your return. You will receive a refund once we’ve received your item." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "order_number",
+        "value": null
+      }, {
+        "parameter": "order_unit",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "bbbbf65c-d9d3-49e0-9c93-a916728c74a9"
+  }, {
+    "intent": "retail.return.store_credit",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, I’ve created a shipping label and emailed it to you. Please print the shipping label and use the attached instructions to start your return. You will see the store credit reflected on your account once we’ve received your item." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "order_number",
+        "value": null
+      }, {
+        "parameter": "order_unit",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "0f90a8f6-c2ea-4985-8041-202cbfc9c280"
+  }, {
+    "intent": "retail.wrong_order",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "69fa6935-9af3-44b5-8287-c93fdd6758b6"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. We can refund the amount to the original payment form or to store credit. Which would you prefer?", "I didn't catch that. Would you prefer store credit or a credit to the original payment form.", "I didn’t get that. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ed9ebd2f-18be-4810-ba9f-507447ec37d5"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. We can refund the amount to the original payment form or to store credit. Which would you prefer?", "I didn't catch that. Would you prefer store credit or a credit to the original payment form.", "I didn’t get that. We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3e528173-3675-47d0-a8b6-bc45361e4a9b"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. We can refund the amount to the original payment form or to store credit. Which would you prefer?", "Sorry, I am unable to hear you. Would you prefer store credit or a credit to the original payment form.", "Sorry, I could not hear you.We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e8e4127d-3382-4a9b-b820-3471136e2b22"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. We can refund the amount to the original payment form or to store credit. Which would you prefer?", "Sorry, I am unable to hear you. Would you prefer store credit or a credit to the original payment form.", "Sorry, I could not hear you.We can refund the amount to the original payment form or to store credit. Which would you prefer?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "587bd617-df50-402c-9614-c63599a0c862"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you.", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8831ce32-86a1-4045-9fe9-d2af2f461454"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3d7bc2d9-0ae5-435f-8d54-cd44c3c76276"
+  } ]
+}

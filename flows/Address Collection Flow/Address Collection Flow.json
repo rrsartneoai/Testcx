@@ -1,0 +1,293 @@
+{
+  "name": "d894cb0c-5040-42d9-9cf1-0a3e37564ef0",
+  "displayName": "Address Collection Flow",
+  "transitionRoutes": [ {
+    "intent": "small_talk.start_over",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Sounds good." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "bb39360b-b79f-4466-ba05-2d009a62cb54"
+  }, {
+    "intent": "small_talk.agent_hand_off",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "c3d3881a-ed36-4547-ba66-fd42feec646e"
+  }, {
+    "intent": "retail.manage_account_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Manage Account"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "9a60862a-dfeb-43e4-a394-5a7485a10669"
+  }, {
+    "intent": "retail.account_loyalty_points_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Loyalty Points"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "85b5b99f-4d08-45c0-b89f-3d658a9b4f0c"
+  }, {
+    "intent": "retail.reset_account_password_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Reset Password"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "230b7375-129b-4804-8beb-90b7777b15a1"
+  }, {
+    "intent": "retail.update_account_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Update Address"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "58254cb3-012f-4aca-ba39-7230cc702080"
+  }, {
+    "intent": "retail.replace_loyalty_card_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Replace Card"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "4ebc64ad-b63c-48c0-8ba0-3d64999cbd27"
+  }, {
+    "intent": "retail.purchase_item_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Purchase Item"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "89f10cc9-c60b-4359-a2a8-4d1d8d0caab7"
+  }, {
+    "intent": "retail.nearest_store_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": true
+      }, {
+        "parameter": "operation",
+        "value": "Search Store"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "c3e4cce1-f7ad-4e58-87ac-744990fcee61"
+  }, {
+    "intent": "retail.check_order_status_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Check Status"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "436de298-5098-4be6-8c70-25d185682717"
+  }, {
+    "intent": "retail.edit_order_shipping_speed_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Speed"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "e431533a-1ff5-40e0-acf6-9f40e4e979fd"
+  }, {
+    "intent": "retail.cancel_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Cancel Order"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "5f88cfcc-32c8-49d2-b98b-2c0392285344"
+  }, {
+    "intent": "retail.return_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Return Order"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "023ae983-1af8-42ef-9b44-7351f1b3c1ca"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here!", "I'm here!", "Don't worry, I'm here.", "Don't worry, I'm still here." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "42ede048-8c9e-4b86-aeae-5f5993cf0813"
+  }, {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Great!", "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "bfc86ecf-f003-42b3-9eaf-9f5040674cc3"
+  }, {
+    "intent": "retail.edit_order_payment_method_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Payment Method"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "93887d0b-efae-461d-ad55-f86772c97954"
+  }, {
+    "intent": "retail.edit_shipping_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Address"
+      }, {
+        "parameter": "reset",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "7ab93202-02dd-4e38-bc5e-4c320e3704d1"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "2f07ad1f-7d64-4538-9257-2f8069b8fb10"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No problem! Just speak up when you're ready.", "Okay, I can wait. Let me know when you're ready.", "Sure, just let me know when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1f517ecb-0252-4869-a429-58cfa8079e2e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      }, {
+        "parameter": "city",
+        "value": null
+      }, {
+        "parameter": "admin-area",
+        "value": null
+      }, {
+        "parameter": "zip-code",
+        "value": null
+      } ]
+    },
+    "targetPage": "Request User Location",
+    "name": "1ab10611-353f-4cc3-a537-31efcf621c51"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2441e12b-e15d-4fa9-85d1-516c959c296e"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "16774563-e446-4529-a947-b5b607a9dd30"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  }
+}

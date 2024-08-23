@@ -1,0 +1,75 @@
+{
+  "name": "068cb680-38ea-41fa-aac4-f53f987ba197",
+  "displayName": "Ask to Use Existing Billing Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to use the credit card on file?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Billing Details",
+    "name": "8cdd25c0-1643-4f3c-8643-70dad5b99790"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Billing Details",
+    "name": "cc6de6b1-5778-4d0c-84f7-fafdca5f1e21"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to use the credit card on file or use a different one?", "I didn't catch that. Is the credit card you have on file the correct one?", "I didn’t get that. Would you like to use the credit card on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "46259853-c761-4314-9048-7e21583c1a42"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to use the credit card on file or use a different one?", "I didn't catch that. Is the credit card you have on file the correct one?", "I didn’t get that. Would you like to use the credit card on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "78b78beb-dcad-4993-bd52-9de9224fd8ca"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Would you like to use the credit card on file or use a different one?", "Sorry, I am unable to hear you. Is the credit card you have on file the correct one?", "Sorry, I could not hear you. Would you like to use the credit card on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9147dac5-db7f-498d-b842-908e87ffe237"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Would you like to use the credit card on file or use a different one?", "Sorry, I am unable to hear you. Is the credit card you have on file the correct one?", "Sorry, I could not hear you. Would you like to use the credit card on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f50f54ea-9d8e-4bc0-a4b1-9abd425b8e0d"
+  } ]
+}

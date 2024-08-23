@@ -1,0 +1,65 @@
+{
+  "name": "5d28c133-bbc8-4a09-8c28-23c27596267f",
+  "displayName": "Choose Account Operation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.operation = null OR $session.params.operation = \"Manage Account\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Manage Account",
+    "name": "d54c890a-df3a-4da2-b203-712e2ffd1cd9"
+  }, {
+    "condition": "$session.params.operation = \"Loyalty Points\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": null
+      } ]
+    },
+    "targetPage": "Return Loyalty Points",
+    "name": "1d42fed6-4525-4bb5-8c5b-d21a4143efb1"
+  }, {
+    "condition": "$session.params.operation = \"Reset Password\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Password Reset Flow",
+    "name": "9078e0cb-f1a9-43fb-bbdf-f4ccd2e2fb07"
+  }, {
+    "condition": "$session.params.operation = \"Replace Card\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Card Replacement Flow",
+    "name": "3317b7bc-aef8-433c-9f9b-ba852b2e15d0"
+  }, {
+    "condition": "$session.params.operation = \"Update Address\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Address Update Flow",
+    "name": "fb7f4cbc-d493-44c6-8e4b-164f4234aced"
+  }, {
+    "condition": "$session.params.operation_complete = true OR $session.params.operation != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "dc346a6c-f8a9-4691-9a01-8d02c6bd4dc1"
+  } ]
+}

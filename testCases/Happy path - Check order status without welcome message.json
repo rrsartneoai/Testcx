@@ -1,0 +1,39 @@
+{
+  "name": "bdabf949-4a16-427c-a451-a9f30262e910",
+  "tags": [ "#orders", "#orderstatus" ],
+  "displayName": "Happy path - Check order status without welcome message",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi I'd like to check the status of my order"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "order_management_reason": "Check Status"
+      },
+      "triggeredIntent": {
+        "name": "retail.check_order_status_initiate"
+      },
+      "currentPage": {
+        "name": "Check Order Number",
+        "flow": "Order Management Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can definitely look into that. Whats your order number? You can either say it or enter it into the keypad followed by the pounds sign." ],
+        "allowPlaybackInterruption": true
+      } ],
+      "currentFlow": {
+        "name": "Order Management Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605711269,
+    "nanos": 546488000
+  }
+}

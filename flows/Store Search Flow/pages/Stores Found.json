@@ -1,0 +1,23 @@
+{
+  "name": "cb26edc4-f437-4947-a395-32243c5f9890",
+  "displayName": "Stores Found",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I found one location at $session.params.stores[0]." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ask About Store Hours",
+    "name": "d8455d71-8c3e-49b9-8a3b-a096b56dc90d"
+  } ]
+}

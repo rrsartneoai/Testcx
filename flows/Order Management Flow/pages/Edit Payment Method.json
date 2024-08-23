@@ -1,0 +1,46 @@
+{
+  "name": "249229ef-c8fa-49a3-b825-58f0916797a2",
+  "displayName": "Edit Payment Method",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.card_is_collected != true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The order has not yet shipped, so I can help update your payment method. ", "It looks like the order has not shipped yet, so we can definitely update the payment method. ", "Looks like we can still update the credit card for this order. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Card Collection Flow",
+    "name": "e9b64f90-af0a-4545-9512-eda416a27e8f"
+  }, {
+    "condition": "$session.params.card_is_collected = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your payment method has been updated. You should get an email confirmation of this change. The payment method will be billed when the order is shipped. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "5de8d769-7535-4534-8d08-fcd2e0c9b724"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "80d70340-0bd1-4f05-ad44-4fb841fa2a23"
+  } ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "739a4a88-d602-4769-b7e2-7dc334505d6e",
+  "tags": [ "#agentredirect" ],
+  "displayName": "Agent redirect - Start of conversation",
+  "notes": "Verifies that the user can ask to be transferred to a human agent right at the start of the conversation, ending the session.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Agent please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.agent_hand_off"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Agent Redirect Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, let me transfer you to a specialist." ]
+      } ],
+      "currentFlow": {
+        "name": "Agent Redirect Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605403936,
+    "nanos": 501000000
+  }
+}

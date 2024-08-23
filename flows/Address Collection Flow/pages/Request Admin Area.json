@@ -1,0 +1,118 @@
+{
+  "name": "d34dce86-e703-4ecf-af19-c6801cf1bc1b",
+  "displayName": "Request Admin Area",
+  "form": {
+    "parameters": [ {
+      "displayName": "admin_area",
+      "required": true,
+      "entityType": "@sys.geo-state",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. Which state are you in?", "I didn't catch that. Which state is associated with that address?", "I didn’t get that. May I have the state associated with your address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e44af1cf-b093-40ed-ad9f-33c2f45dacc5"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. Which state are you in?", "I didn't catch that. Which state is associated with that address?", "I didn’t get that. May I have the state associated with your address?", "I didn’t understand that. What state is associated with the address on file?", "I didn’t understand that. May I have the state associated with the address on file? " ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "32afb12e-7668-41bd-ae5a-c308219cef30"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d7da632c-bff9-4b07-a360-6767e4807806"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Which state is associated with that address?", "Sorry, I am unable to hear you. What's the state for that address?", "Sorry, I could not hear you. Which state is associated with that address?", "I didn’t get that. May I have the state associated with your address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "8adf19e3-b992-4eab-af2f-2945dc4ac278"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Which state is associated with that address?", "Sorry, I am unable to hear you. What's the state for that address?", "Sorry, I could not hear you. Which state is associated with that address?", "I didn’t get that. May I have the state associated with your address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4fa6751f-c275-4f93-8525-971790795820"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7f0a4fe2-0e92-447a-b7fb-6a9bab9eff2c"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Which state is that in?", "Which state is associated with that address?", "May I have the state associated with your address?", "Which state are you in?", "What state are you in? ", "What state is associated with the address? " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.extract.zip_code",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Certainly.", "No problem.", "Alright.", "Sure!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Request Address Components",
+    "name": "63460003-0069-40e3-975b-a35ee218caa4"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "a56e0e1f-7884-46c5-b8df-1d6dbd96ca4b"
+  } ]
+}

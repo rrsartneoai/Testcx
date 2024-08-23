@@ -1,0 +1,32 @@
+{
+  "name": "b922fd91-e7cf-4ad7-87d6-56723dc0c6a2",
+  "displayName": "Start Delivery Address Collection",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "8ad60876-08d0-4b96-9f2c-e7fd9639c01b"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Delivery Address",
+    "name": "1b3a17d9-39bb-4799-8dc7-ac31d8d19310"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "e7344546-9bca-47db-85d0-ae3164cbd1f1"
+  } ]
+}

@@ -1,0 +1,125 @@
+{
+  "name": "ef203f1e-52c6-48ba-8f24-5013eb062198",
+  "displayName": "Request City",
+  "form": {
+    "parameters": [ {
+      "displayName": "city",
+      "required": true,
+      "entityType": "@sys.geo-city",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What city are you in?", "I didn't catch that. What's the city for that address?", "I didn’t get that. Which city is associated with that address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6eb191c6-faf4-4705-b8b4-0cb3e703dc1d"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What city are you in?", "I didn't catch that. What's the city for that address?", "I didn’t get that. Which city is associated with that address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9c0d47e6-e499-4c2a-9282-e1e37bdd4977"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "76d2f409-a2d4-4d2d-a077-bd18074739bb"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What city are you in?", "Sorry, I am unable to hear you. What's the city for that address?", "Sorry, I could not hear you. Which city is associated with that address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "68e3e20c-c5df-4929-8724-acacaa6229e6"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What city are you in?", "Sorry, I am unable to hear you. What's the city for that address?", "Sorry, I could not hear you. Which city is associated with that address?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "4c0a6b8b-97f8-4fb4-8828-e0a1474bfe55"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "99b5f29f-3e48-4598-82d5-7b4e6593e5d5"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Which city are you in?", "What's the city for that address?", "Which city are you located in?", "Which city is associated with that address?", "What is the name of the city that you are currently in? ", "What is the name of the city associated with the address? " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.extract.zip_code",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Certainly.", "No problem.", "Sure!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Request Address Components",
+    "name": "3f63198e-84d1-43fe-814e-c891b3ba6be7"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.location.admin-area = null AND $session.params.admin-area = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Admin Area",
+    "name": "9653a568-5feb-4250-a7ff-d8bf2ced3bd0"
+  }, {
+    "condition": "$page.params.status = FINAL AND ($session.params.location.admin-area != null OR $session.params.admin-area != null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "b348677d-13fb-4094-9577-7dd0bc55649a"
+  } ]
+}

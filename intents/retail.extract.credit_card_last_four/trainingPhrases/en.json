@@ -1,0 +1,472 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Try "
+    }, {
+      "text": "0077",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The last four digits are "
+    }, {
+      "text": "0004",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "0034",
+      "parameterId": "last_four"
+    }, {
+      "text": " was my number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "0679",
+      "parameterId": "last_four"
+    }, {
+      "text": " should work"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Let's try "
+    }, {
+      "text": "4934",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I found it try "
+    }, {
+      "text": "4549",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I could have sworn it was "
+    }, {
+      "text": "9494",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "2222",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "4444",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Try "
+    }, {
+      "text": "4936",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am fairly confident "
+    }, {
+      "text": "2242",
+      "parameterId": "last_four"
+    }, {
+      "text": " was the number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I remember it ended in "
+    }, {
+      "text": "4435",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I used the card ending in "
+    }, {
+      "text": "9994",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "This should work try "
+    }, {
+      "text": "4584",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Found my card the number is "
+    }, {
+      "text": "9565",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have it here somewhere "
+    }, {
+      "text": "4960",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are you ready it's "
+    }, {
+      "text": "3493",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The card number was definitely "
+    }, {
+      "text": "0433",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "If I recall correctly I used "
+    }, {
+      "text": "5943",
+      "parameterId": "last_four"
+    }, {
+      "text": " for my card"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm ninety percent confident I used "
+    }, {
+      "text": "5694",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Pretty sure it was "
+    }, {
+      "text": "6304",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I thought it was "
+    }, {
+      "text": "6054",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Perhaps it was "
+    }, {
+      "text": "6943",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Maybe "
+    }, {
+      "text": "3932",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think it was "
+    }, {
+      "text": "9329",
+      "parameterId": "last_four"
+    }, {
+      "text": " but I can't remember"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm fairly confident it was "
+    }, {
+      "text": "2234",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm pretty sure "
+    }, {
+      "text": "3292",
+      "parameterId": "last_four"
+    }, {
+      "text": " was the number I used"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please check if "
+    }, {
+      "text": "9394",
+      "parameterId": "last_four"
+    }, {
+      "text": " was the number I used"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you try "
+    }, {
+      "text": "5695",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I used "
+    }, {
+      "text": "3923",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think the number was "
+    }, {
+      "text": "8888",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm not sure try "
+    }, {
+      "text": "9234",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think "
+    }, {
+      "text": "4234",
+      "parameterId": "last_four"
+    }, {
+      "text": " is the right number"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Does "
+    }, {
+      "text": "4242",
+      "parameterId": "last_four"
+    }, {
+      "text": " match"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm pretty sure it was "
+    }, {
+      "text": "9333",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think it's "
+    }, {
+      "text": "2212",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Hang on let me find my card "
+    }, {
+      "text": "3923",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Here's the number "
+    }, {
+      "text": "2932",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My last four digits are "
+    }, {
+      "text": "3492",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The number is "
+    }, {
+      "text": "1234",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "2424",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The last four digits are "
+    }, {
+      "text": "4242",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "3034",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "got it they are "
+    }, {
+      "text": "2355",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "found it its "
+    }, {
+      "text": "5943",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "here you go its "
+    }, {
+      "text": "3556",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "the numbers are ",
+      "auto": true
+    }, {
+      "text": "0344",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "its "
+    }, {
+      "text": "5493",
+      "parameterId": "last_four"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "4758",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The last ",
+      "auto": true
+    }, {
+      "text": "four",
+      "auto": true
+    }, {
+      "text": " digits of my card are ",
+      "auto": true
+    }, {
+      "text": "1234",
+      "parameterId": "last_four",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

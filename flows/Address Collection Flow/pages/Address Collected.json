@@ -1,0 +1,18 @@
+{
+  "name": "5faf71c8-5d43-4dd9-add3-91904ec6a8ba",
+  "displayName": "Address Collected",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "cc7b7568-7346-4014-9e44-80a045232390"
+  } ]
+}

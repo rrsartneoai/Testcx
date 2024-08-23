@@ -1,0 +1,85 @@
+{
+  "name": "8b5f5005-15df-42b6-909e-ee487cfa0d34",
+  "displayName": "Confirm No Purchase",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like your cart is empty. Is there anything you wanted to purchase today?", "I see your cart is empty. Did you want to purchase anything today?", "I noticed that your cart is empty. Would you like to purchase something today?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "5c149103-266b-438a-b3f9-16006ad5d8c0"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add to Cart",
+    "name": "d37bd02e-8b06-4b2b-9fbe-58e5b15dc6c8"
+  }, {
+    "intent": "retail.extract.add_item_cart",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add to Cart",
+    "name": "3bb84ce8-73ca-4c58-8fd2-b4f1a17e2dee"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Is there anything you wanted to purchase today?", "I didn't catch that. Would you like to purchase something today?", "I didn’t get that. Is there anything you want to buy today?", "Sorry, I didn’t understand that. Is there anything you wanted to purchase today?", "I didn't understand that. Would you like to purchase something today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3acf42f4-4175-4665-b50c-48017a5719c9"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Is there anything you wanted to purchase today?", "I didn't catch that. Would you like to purchase something today?", "I didn’t get that. Is there anything you want to buy today?", "Sorry, I didn’t understand that. Is there anything you wanted to purchase today?", "I didn't understand that. Would you like to purchase something today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3eded90c-b447-4209-812f-d3a9a09883ed"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Is there anything you wanted to purchase today?", "Sorry, I am unable to hear you. Would you like to purchase something today?", "Sorry, I could not hear you. Is there anything you want to buy today?", "Sorry, I am unable to hear you. Is there anything you wanted to purchase today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f5e20666-9b39-46b4-8e57-2c3ac816c3a2"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Is there anything you wanted to purchase today?", "Sorry, I am unable to hear you. Would you like to purchase something today?", "Sorry, I could not hear you. Is there anything you want to buy today?", "Sorry, I am unable to hear you. Is there anything you wanted to purchase today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "16919ec0-a485-4379-9196-2882e030d570"
+  } ]
+}

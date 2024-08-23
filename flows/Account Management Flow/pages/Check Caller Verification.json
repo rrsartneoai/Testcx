@@ -1,0 +1,38 @@
+{
+  "name": "1e0ca4ee-14e4-4095-86a3-e7a68bd84aeb",
+  "displayName": "Check Caller Verification",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.is_logged_in = false OR $session.params.is_logged_in = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "allow_guest_login",
+        "value": false
+      } ]
+    },
+    "targetFlow": "User Verification Flow",
+    "name": "e7174b11-cdd9-4b0b-9af6-513f01e989ff"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "51bc2da8-a5e2-43af-8ee7-ff647dac1ebe"
+  }, {
+    "condition": "$session.params.is_logged_in = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Choose Account Operation",
+    "name": "de570548-8629-4e2e-8cf5-c21d2a666a6f"
+  } ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "9e8dbaa7-c7d4-4cf0-bd95-eac6b4e3f329",
+  "displayName": "Card Collected",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "card_is_collected",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "ddfcad0d-6209-42de-80f2-79f9c002b9c1"
+  } ]
+}

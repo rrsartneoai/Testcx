@@ -1,0 +1,128 @@
+{
+  "name": "8687544f-e072-4c36-b416-402710215e78",
+  "displayName": "Request Zip Code",
+  "form": {
+    "parameters": [ {
+      "displayName": "card_zip_code",
+      "required": true,
+      "entityType": "@sys.zip-code",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What’s the billing zip code for the credit card? You can say it, or use the keypad.", "I didn't catch that. Could you provide the zip code for the credit cards billing address? Feel free to say it, or use the keypad.", "I didn’t get that. What is the zip code associated with the credit card? You can either say it, or use the keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "a2ab9aa8-3cc2-4230-9b2b-eb55e0b6ea58"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What’s the billing zip code for the credit card? You can say it, or use the keypad.", "I didn't catch that. Could you provide the zip code for the credit cards billing address? Feel free to say it, or use the keypad.", "I didn’t get that. What is the zip code associated with the credit card? You can either say it, or use the keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "2a9fb093-25f9-44b9-937a-c0279386ccec"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9b3dd22f-4195-435c-88a9-b86ae787e784"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What’s the billing zip code for the credit card? You can say it, or use the keypad.", "Sorry, I am unable to hear you. Could you provide the zip code for the credit cards billing address? Feel free to say it, or use the keypad.", "Sorry, I could not hear you. What is the zip code associated with the credit card? You can either say it, or use the keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "630687df-df7a-4e9f-a77f-49de5c91474e"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What’s the billing zip code for the credit card? You can say it, or use the keypad.", "Sorry, I am unable to hear you. Could you provide the zip code for the credit cards billing address? Feel free to say it, or use the keypad.", "Sorry, I could not hear you. What is the zip code associated with the credit card? You can either say it, or use the keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "fee5ccd2-4093-4a88-bde4-c0ed70780df3"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7a19ad74-b4d4-46d2-9fc5-7070fa3ae4b5"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 5,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What’s the billing zip code for your card? You can say it, or use the keypad.", "Could you provide the zip code for your card's billing address? Feel free to say it, or use the keypad.", "What is the zip code associated with your card? You can either say it, or use the keypad." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Card Collected",
+    "name": "1ad077b4-02c0-47e8-8113-f6bc65c46dee"
+  } ]
+}

@@ -1,0 +1,82 @@
+{
+  "name": "760b8de9-8d80-4d20-bf72-fdaa6fb60401",
+  "displayName": "Ask to Use Existing Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to use the shipping address on file?", "Should I use the shipping address we have on file for you?", "Should I send your purchases to your address on file?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Ask to Use Existing Billing Details",
+    "name": "f806e986-c2f9-47c7-9cdc-ba17cec25234"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Shipping Address",
+    "name": "f787338c-0ecd-4508-8e12-bd74513db486"
+  }, {
+    "intent": "retail.address_changed",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Shipping Address",
+    "name": "435bbdd2-c1d4-4fad-a85e-5a854035e23e"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to use the shipping address on file, or use a different one?", "I didn't catch that. Is the shipping address you have on file the correct one?", "I didn’t get that. Would you like to use the address on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7932448d-aa15-4f34-bc11-18e3723dc24b"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to use the shipping address on file, or use a different one?", "I didn't catch that. Is the shipping address you have on file the correct one?", "I didn’t get that. Would you like to use the address on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b4398fc2-da50-4364-b73d-7b601d0c5acc"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Would you like to use the shipping address on file, or use a different one?", "Sorry, I am unable to hear you. Is the shipping address you have on file the correct one?", "Sorry, I could not hear you. Would you like to use the address on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c054305e-0ef0-44a4-927f-18d0db77a904"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Would you like to use the shipping address on file, or use a different one?", "Sorry, I am unable to hear you. Is the shipping address you have on file the correct one?", "Sorry, I could not hear you. Would you like to use the address on file for this order?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8191ddc2-3d5c-4f68-8353-a0f3fc73314f"
+  } ]
+}

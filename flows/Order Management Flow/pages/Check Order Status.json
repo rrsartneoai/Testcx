@@ -1,0 +1,26 @@
+{
+  "name": "b15ab2d1-7334-4a64-995e-77744e3ba252",
+  "displayName": "Check Order Status",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like that order will be delivered tomorrow.", "The order is currently being processed. You should get an email with a tracking number when it ships.", "The order is currently being shipped. You can track the item using the tracking number provided through email. " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "581ff130-f6a1-4062-94a5-40018520c8bd"
+  } ]
+}

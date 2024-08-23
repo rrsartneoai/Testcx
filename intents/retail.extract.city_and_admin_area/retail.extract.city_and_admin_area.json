@@ -1,0 +1,17 @@
+{
+  "name": "d9be0143-1c81-4540-b008-14c920bda560",
+  "displayName": "retail.extract.city_and_admin_area",
+  "parameters": [ {
+    "id": "city",
+    "entityType": "@sys.geo-city"
+  }, {
+    "id": "admin_area",
+    "entityType": "@sys.geo-state"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 51
+}

@@ -1,0 +1,126 @@
+{
+  "name": "4fe058cb-daeb-4406-b0f6-5c07e68a8fa9",
+  "displayName": "Clarify Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Is the phone number you're calling from the same one registered with your account?", "Is this the same phone number that's registered with your account?", "Are you calling from the same number that's registered with your account?", "Is the phone number you're calling from the same one that was used with your account?", "Is the phone number you're dialing from registered with your account?", "Is the phone number on your account the same as the one you're calling in from?", "Is the phone number associated with your account the same as the one you're dialing in from?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Verify Phone Number",
+    "name": "f20e8822-58b9-4498-b62f-e5d00bacd85b"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phone-number",
+        "value": null
+      } ]
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "2f73790c-dead-4239-8efd-aad6c9ae7c01"
+  }, {
+    "intent": "small_talk.confirmation.correct_phone_number",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Verify Phone Number",
+    "name": "7c8f6eb0-8283-4d9a-bf7d-78204628c2ff"
+  }, {
+    "intent": "small_talk.confirmation.different_phone_number",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "bd56ed67-0419-40b6-824c-ecbe65900bfa"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Are you calling from the same number that's registered with your account?", "I didn't catch that. Is the phone number you're calling from the same one registered with your account?", "I didn’t get that. Is the phone number on your account the same as the one you're calling in from?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bbecabf5-bc88-40d1-96c2-86f381281cfb"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Are you calling from the same number that's registered with your account?", "I didn't catch that. Is the phone number you're calling from the same one registered with your account?", "I didn’t get that. Is the phone number on your account the same as the one you're calling in from?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cc37e525-b7c3-4138-90e8-cf7ec651c1e1"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seems I’m having a problem understanding you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "85d33a90-423c-4c88-85e7-9855d136b529"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Are you calling from the same number that's registered with your account?", "Sorry, I am unable to hear you. Is the phone number you're calling from the same one registered with your account?", "Sorry, I could not hear you. Is the phone number on your account the same as the one you're calling in from?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "a038a6ce-19fd-42ef-a87f-81ce667302a7"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Are you calling from the same number that's registered with your account?", "Sorry, I am unable to hear you. Is the phone number you're calling from the same one registered with your account?", "Sorry, I could not hear you. Is the phone number on your account the same as the one you're calling in from?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "1590218a-ff35-40a6-9cd9-f29f4031c2e2"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7e8e4121-b6ca-4835-b915-675cabffa611"
+  } ]
+}

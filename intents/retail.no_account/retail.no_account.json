@@ -1,0 +1,10 @@
+{
+  "name": "5dea02cb-f7c2-4f85-b719-96a8efb365f1",
+  "displayName": "retail.no_account",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

@@ -1,0 +1,136 @@
+{
+  "name": "62529ac3-f587-44c2-9661-a3326808f2c1",
+  "displayName": "Collect Phone Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "guest_phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. Could I get your phone number? You can say it, or you can type it into the keypad, followed by the pound key.", "I didn't catch that. Could you give me your phone number? Feel free to say it, or you can enter it into the keypad, followed by the pound key.", "I didn’t get that. What’s your phone number? You can say it, or you can type it into the keypad, followed by the pound key. " ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "a39d162d-edae-42af-9051-ad494f0eaf2c"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I didn’t get that. What’s your phone number? You can say it, or you can type it into the keypad, followed by the pound key. ", "I didn't catch that. Could you give me your phone number? Feel free to say it, or you can enter it into the keypad, followed by the pound key.", "Sorry I didn’t catch that. Could I get your phone number? You can say it, or you can type it into the keypad, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "ea85e75d-db51-4e6c-9850-355b86675563"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "28d47e88-98d2-4964-8076-d439de193e92"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What’s your phone number? You can say it, or you can type it into the keypad, followed by the pound key. ", "Sorry, I am unable to hear you. Could you give me your phone number? Feel free to say it, or you can enter it into the keypad, followed by the pound key.", "Sorry, I could not hear you. Could I get your phone number? You can say it, or you can type it into the keypad, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "d4c147a3-f6e8-4543-bc9c-eb3d63fe9ad0"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What’s your phone number? You can say it, or you can type it into the keypad, followed by the pound key. ", "Sorry, I am unable to hear you. Could you give me your phone number? Feel free to say it, or you can enter it into the keypad, followed by the pound key.", "Sorry, I could not hear you. Could I get your phone number? You can say it, or you can type it into the keypad, followed by the pound key." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "92d67a9a-d0de-4391-8b1f-8458be6fdc01"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "49d39801-c6af-472a-915e-c6427f97d6c6"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Can I have your phone number to send the order details and confirmation? You can say it, or you can type it into the keypad, followed by the pound key.", "Could you provide a phone number to send the order confirmation too? Feel free to say it, or you can enter it into the keypad, followed by the pound key." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "card_is_collected",
+        "value": null
+      } ]
+    },
+    "targetPage": "Order Placed",
+    "name": "e319ebff-5dd3-454a-9fca-677227aa1e27"
+  } ]
+}

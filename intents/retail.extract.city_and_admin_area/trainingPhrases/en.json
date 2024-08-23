@@ -1,0 +1,568 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Not sure what my zip code is but the city is ",
+      "auto": true
+    }, {
+      "text": "Naperville",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Not sure what my zip is but I'm in ",
+      "auto": true
+    }, {
+      "text": "Chicago",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I forget what my zip was but I live in ",
+      "auto": true
+    }, {
+      "text": "Montgomery Village",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in the great state of "
+    }, {
+      "text": "Washington",
+      "parameterId": "admin_area"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I don't recall my zip code but I'm in "
+    }, {
+      "text": "Rhode Island",
+      "parameterId": "admin_area"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I live in "
+    }, {
+      "text": "South Dakota",
+      "parameterId": "admin_area"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I don't remember my zip but I'm in "
+    }, {
+      "text": "Virginia",
+      "parameterId": "admin_area"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have forgotten my zip code but I'm in ",
+      "auto": true
+    }, {
+      "text": "Westfield",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I ive in ",
+      "auto": true
+    }, {
+      "text": "Chaska",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Minnesota",
+      "parameterId": "admin_area",
+      "auto": true
+    }, {
+      "text": " does that work",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm a resident of ",
+      "auto": true
+    }, {
+      "text": "Conyers",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Georgia",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can't remember my zip but I live in ",
+      "auto": true
+    }, {
+      "text": "Muskegon",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "Missouri",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Instead of zip can I use my city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "If I tell you my city and state will that work",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I don't remember my zip but I'm in ",
+      "auto": true
+    }, {
+      "text": "Trenton",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I live in ",
+      "auto": true
+    }, {
+      "text": "Holly Springs",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " in the great state of ",
+      "auto": true
+    }, {
+      "text": "North Carolina",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The city is ",
+      "auto": true
+    }, {
+      "text": "Wellington",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " and the state is ",
+      "auto": true
+    }, {
+      "text": "Florida",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Morrisville",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Pennsylvania",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am living in ",
+      "auto": true
+    }, {
+      "text": "Powell",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " in the state of ",
+      "auto": true
+    }, {
+      "text": "Tennesee",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I don't know my zip but I'm in ",
+      "auto": true
+    }, {
+      "text": "Fremont",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Ohio",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have my city and state it's ",
+      "auto": true
+    }, {
+      "text": "Wayne",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "New Jersey",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'd prefer city and state over zip code",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'd rather not give you my zip how about the city instead",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is city and state okay instead of zip",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How about I just give you my state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am in ",
+      "auto": true
+    }, {
+      "text": "Middletown",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My city is "
+    }, {
+      "text": "Glastonbury",
+      "parameterId": "city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Let's use city instead",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I know what my city is does that work",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'd prefer to just give you my city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is it okay if I just use my city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I live in ",
+      "auto": true
+    }, {
+      "text": "Florida",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in "
+    }, {
+      "text": "Allen Park",
+      "parameterId": "city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "The city and state would be easier for me",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "Hartford",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Conneticut",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I live in ",
+      "auto": true
+    }, {
+      "text": "Chicago",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My state is ",
+      "auto": true
+    }, {
+      "text": "Kentucky",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "California",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "Indiana",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "Columbus",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "New York",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I would rather just give you my city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could I just use the state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I just give you my state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I only know the city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Would it help if I told you the city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could I just use my city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "Sacramento",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "California",
+      "parameterId": "admin_area",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in "
+    }, {
+      "text": "New Jersey",
+      "parameterId": "admin_area"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I can tell you I'm in ",
+      "auto": true
+    }, {
+      "text": "San Francisco",
+      "parameterId": "city",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm in ",
+      "auto": true
+    }, {
+      "text": "Chicago",
+      "parameterId": "city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Illinois",
+      "parameterId": "admin_area",
+      "auto": true
+    }, {
+      "text": " does that help",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I just give you my city and state",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

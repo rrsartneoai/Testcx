@@ -1,0 +1,11 @@
+{
+  "name": "311e5978-a921-402e-9224-9703a1605f5f",
+  "displayName": "retail.unsupported_item_request",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Detects when the user tries to purchase an item that's not supported by the agent.",
+  "numTrainingPhrases": 33
+}

@@ -1,0 +1,10 @@
+{
+  "name": "49997ee1-33ee-4497-ad19-b79a601f6400",
+  "displayName": "retail.nearest_store_initiate",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 34
+}

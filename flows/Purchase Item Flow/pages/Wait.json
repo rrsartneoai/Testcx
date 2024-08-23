@@ -1,0 +1,66 @@
+{
+  "name": "461e8929-900f-47fb-a51d-9244dea2d862",
+  "displayName": "Wait",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Great!", "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "1ff8668c-c0c6-4c64-950c-c043ff84b7ad"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here!", "I'm here!", "Don't worry, I'm here.", "Don't worry, I'm still here." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "94d69a11-c4c8-49f1-9007-976c058b1032"
+  }, {
+    "intent": "retail.extract.add_item_cart",
+    "condition": "$session.params.cart != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great, I have added a $session.params.order_unit to the cart for you.", "I have added a $session.params.order_unit to your cart. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cart",
+        "value": "$session.params.cart, $session.params.order_unit"
+      } ]
+    },
+    "targetPage": "Add to Cart",
+    "name": "01e4009d-e9cc-4392-9291-3db45e7ccd8f"
+  }, {
+    "intent": "retail.extract.add_item_cart",
+    "condition": "$session.params.cart = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great, I have added a $session.params.order_unit to the cart for you.", "I have added a $session.params.order_unit to your cart. " ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cart",
+        "value": "$session.params.order_unit"
+      } ]
+    },
+    "targetPage": "Add to Cart",
+    "name": "bdf5cbfc-d7a4-4ec0-8b29-c5eda36d1e98"
+  } ]
+}

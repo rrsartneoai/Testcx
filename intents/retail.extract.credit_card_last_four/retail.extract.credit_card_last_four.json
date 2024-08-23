@@ -1,0 +1,14 @@
+{
+  "name": "33608d3a-32d7-435b-9c6d-6ddda39f5fc6",
+  "displayName": "retail.extract.credit_card_last_four",
+  "parameters": [ {
+    "id": "last_four",
+    "entityType": "@sys.number"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 50
+}

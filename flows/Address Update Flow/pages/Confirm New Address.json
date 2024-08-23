@@ -1,0 +1,353 @@
+{
+  "name": "2bdf4d10-3f2f-45b5-bbbd-2f431e04a6d4",
+  "displayName": "Confirm New Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.location.street-address != null",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.location.zip-code != null",
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            }, {
+              "condition": "$session.params.zip_code != null",
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.admin-area $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.location.admin-area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.location.admin-area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.location.city $session.params.admin_area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.street-address $session.params.city $session.params.admin_area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            } ]
+          }
+        } ]
+      }, {
+        "condition": "$session.params.location.business-name != null",
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.location.zip-code != null",
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.city $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.city $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.admin-area $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.city $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.zip-code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            }, {
+              "condition": "$session.params.zip_code != null",
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.city $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.admin-area $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.city $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.zip_code. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.location.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.city $session.params.location.admin-area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.city $session.params.location.admin-area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "condition": "$session.params.city != null AND $session.params.location.admin-area != null",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.location.city $session.params.admin_area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "I heard $session.params.location.business-name $session.params.city $session.params.admin_area. Is that correct?" ]
+                        },
+                        "languageCode": "en"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Finish Address Change",
+    "name": "b974f14b-bb9c-4b39-9cbf-f088bfc30d86"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Let's try this again.", "Okay, one more time.", "Alright, let's try once more." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      }, {
+        "parameter": "admin_area",
+        "value": null
+      }, {
+        "parameter": "city",
+        "value": null
+      }, {
+        "parameter": "zip_code",
+        "value": null
+      } ]
+    },
+    "targetPage": "Collect New Address",
+    "name": "db925db9-43a9-4a1b-b6a9-a99c2a9840f6"
+  } ]
+}

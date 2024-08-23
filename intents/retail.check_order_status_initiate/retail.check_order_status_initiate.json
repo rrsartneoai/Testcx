@@ -1,0 +1,15 @@
+{
+  "name": "544b2533-a0dc-43ba-8c26-e4dcc77dbe82",
+  "displayName": "retail.check_order_status_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit",
+    "isList": true
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 64
+}

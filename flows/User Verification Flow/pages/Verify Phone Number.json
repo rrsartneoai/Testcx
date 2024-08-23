@@ -1,0 +1,23 @@
+{
+  "name": "1a7bee77-e374-46f6-bbeb-a1baee5e59d5",
+  "displayName": "Verify Phone Number",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thanks, I have verified your phone number.", "Alright, I've verified your phone number.", "Okay, your phone number has been verified." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request to send PIN",
+    "name": "173e2a6d-b6ce-48da-8db8-59f4daa78798"
+  } ]
+}

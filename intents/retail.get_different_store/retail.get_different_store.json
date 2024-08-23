@@ -1,0 +1,10 @@
+{
+  "name": "e9bce263-eca3-4251-8d1d-4fb5b438d9aa",
+  "displayName": "retail.get_different_store",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

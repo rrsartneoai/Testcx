@@ -1,0 +1,10 @@
+{
+  "name": "a7778863-a1c1-4753-b39a-6ff92f357148",
+  "displayName": "small_talk.confirmation.proceed_as_guest",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 26
+}

@@ -1,0 +1,10 @@
+{
+  "name": "4262d3ae-2c6a-40d5-84ff-31309ba852f2",
+  "displayName": "retail.return.store_credit",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 26
+}

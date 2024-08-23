@@ -1,0 +1,10 @@
+{
+  "name": "1eaa39d0-07b5-43c1-9c4f-dcc335763839",
+  "displayName": "retail.update_account_address_initiate",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 25
+}

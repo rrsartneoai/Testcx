@@ -1,0 +1,10 @@
+{
+  "name": "e8b35d09-5060-4981-a1aa-74dff1a0331e",
+  "displayName": "retail.manage_account_initiate",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 25
+}

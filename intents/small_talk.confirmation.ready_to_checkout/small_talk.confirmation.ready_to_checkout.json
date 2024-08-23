@@ -1,0 +1,10 @@
+{
+  "name": "47b097ef-e680-4e5d-b557-15dde0b8df7f",
+  "displayName": "small_talk.confirmation.ready_to_checkout",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 27
+}

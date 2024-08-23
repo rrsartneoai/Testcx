@@ -1,0 +1,26 @@
+{
+  "name": "39dbb4a8-13f9-4049-98b2-037671eb035e",
+  "displayName": "Order Placed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I have placed the order for you. You should receive a confirmation text soon." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "86304c20-23f7-49bc-8cdf-e8b51f98a33d"
+  } ]
+}

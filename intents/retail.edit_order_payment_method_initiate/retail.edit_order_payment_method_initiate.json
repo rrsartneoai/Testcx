@@ -1,0 +1,14 @@
+{
+  "name": "f6ca6f34-99e1-45f2-9818-6031732a1fc6",
+  "displayName": "retail.edit_order_payment_method_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 50
+}

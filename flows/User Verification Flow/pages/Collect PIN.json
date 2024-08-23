@@ -1,0 +1,141 @@
+{
+  "name": "46c9cecf-9575-484b-b675-f4b3291704e9",
+  "displayName": "Collect PIN",
+  "form": {
+    "parameters": [ {
+      "displayName": "pin_number",
+      "required": true,
+      "entityType": "@pin-number",
+      "isList": true,
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. Could you please give me the PIN you received? You can say it or enter it into the keypad.", "I didn't catch that. May I have the PIN you received? You can either say it or use your keypad.", "I didn’t get that. Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "45b06ca6-91ad-4c0e-bf25-ee361f7a26a4"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. Could you please give me the PIN you received? You can say it or enter it into the keypad.", "I didn't catch that. May I have the PIN you received? You can either say it or use your keypad.", "I didn’t get that. Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "ffdbd84a-7999-48a5-a0cf-a6adae34f933"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "It seem I’m having a problem understanding you.", "It looks like we're having issues communicating.", "Sorry, I still didn’t understand that.", "Sorry, I'm having trouble understanding you.", "Seems like I'm having trouble understanding your requests." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f11a5482-f96e-4256-872f-f6b079b88818"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Could you please give me the PIN you received? You can say it or enter it into the keypad.", "Sorry, I am unable to hear you. May I have the PIN you received? You can either say it or use your keypad.", "Sorry, I could not hear you. Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "3ca07f69-64d8-48ab-968c-6c86a4adba85"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. Could you please give me the PIN you received? You can say it or enter it into the keypad.", "Sorry, I am unable to hear you. May I have the PIN you received? You can either say it or use your keypad.", "Sorry, I could not hear you. Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "170c4ba7-fd2a-43f2-85ed-cf46e60e0e0f"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "62ad9e15-624b-4565-a037-9aecf8a7e675"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I've sent you a 4 digit PIN. Could you please give me the PIN you received? You can say it or enter it into the keypad.", "I have sent a 4 digit PIN to your phone. May I have the PIN you received? You can either say it or use your keypad.", "I've sent a 4 digit PIN to your phone. Please provide the PIN you received, either by saying it or entering it into your keypad." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.no_pin",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "8789e654-a998-4c14-aaae-0734b9dd40b5"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Account Verified",
+    "name": "085e37fa-3e1f-491d-9b25-064e48afa172"
+  } ]
+}

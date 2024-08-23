@@ -1,0 +1,285 @@
+{
+  "name": "061c3b77-4446-4252-99f4-fff7b55ed8fd",
+  "displayName": "Address Update Flow",
+  "transitionRoutes": [ {
+    "intent": "small_talk.start_over",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "56007b1d-3fe4-4093-86b8-db07f6d8dea7"
+  }, {
+    "intent": "small_talk.agent_hand_off",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "6939d1c9-d35f-4c31-83ea-bfd4cb0b214c"
+  }, {
+    "intent": "retail.replace_loyalty_card_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Replace Card"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "b09247e1-9d8b-4377-8fcc-700d926dc19a"
+  }, {
+    "intent": "retail.account_loyalty_points_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Loyalty Points"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "c2b620af-6ef2-42ce-8e41-d3b87bae0478"
+  }, {
+    "intent": "retail.manage_account_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Manage Account"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "37d33f44-287a-4e6a-ac2b-6fe9ed1a8904"
+  }, {
+    "intent": "retail.purchase_item_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Purchase Item"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "858f47b1-f79b-469b-bd61-518fd8ba2d65"
+  }, {
+    "intent": "retail.nearest_store_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Search Store"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "f03f8c6f-d307-4e42-92f8-7eca828628a9"
+  }, {
+    "intent": "retail.cancel_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Cancel Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "7498b810-37cf-44dd-b511-36ca5cdb8c81"
+  }, {
+    "intent": "retail.edit_order_shipping_speed_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Speed"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "37b8febf-4c73-4d86-9b43-1e5d5195d68b"
+  }, {
+    "intent": "retail.check_order_status_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Check Status"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "82c8b9ef-5f7d-46a1-b308-fcc54c5b1eb3"
+  }, {
+    "intent": "retail.return_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Return Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "9a486333-2c59-4e79-9446-c519cc701e36"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, just let me know when you're ready.", "Okay, I can wait. Let me know when you're ready.", "No problem! Just speak up when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "148aa309-49f0-4358-b97e-cc61a8f8ffb8"
+  }, {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Great!", "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "4f26e8a8-6b18-4bfc-ac80-483641e9d0d0"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here!", "I'm here!", "Don't worry, I'm here.", "Don't worry, I'm still here." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "fc6c1626-068d-4409-b9fe-1012eff6d9a5"
+  }, {
+    "intent": "retail.edit_order_payment_method_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Payment Method"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "64e7df46-4d70-473d-a67f-d1bacb303aa3"
+  }, {
+    "intent": "retail.edit_shipping_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Address"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "6fdd3bc7-6324-49c2-8e73-589dc6cee4f3"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "e950bb11-e3cb-4f64-b5c0-f02209fb7ab5"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Start Address Collection",
+    "name": "b58d51b1-194a-4fef-b7f5-4f0b8c9e5df3"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9df667c1-2a55-4615-ad7e-64e7a0a55d28"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b9ffe023-b1e6-40f3-b0e8-fb4c15af8881"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, could you say that again?", "Sorry, could you repeat that?", "I didn't catch that. Can you say it again?", "Sorry, could you repeat that please?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3da861d7-28c7-42c1-b9c2-731c050e988d"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, could you say that again?", "Sorry, could you repeat that?", "I didn't catch that. Can you say it again?", "Sorry, could you repeat that please?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c7ecb738-72a0-4252-a306-37cb4173fb68"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "43f9880b-df54-43ba-9c80-0f184fd8f272"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you repeat that please?", "Sorry I am unable to hear you. Could you say that again please?", "Sorry I could not hear you there. Can you repeat that?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "46e6eddc-1411-4ac5-ac34-423b6ce02766"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you repeat that please?", "Sorry I am unable to hear you. Could you say that again please?", "Sorry I could not hear you there. Can you repeat that?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "30b46bb2-4ec7-4cab-8524-277b5159617d"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I am having trouble hearing you.", "Sorry I didn't get that. ", "Sorry I was not able to hear you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "22d5f826-9c1b-49f9-94d8-5453ed378836"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

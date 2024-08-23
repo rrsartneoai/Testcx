@@ -1,0 +1,13 @@
+{
+  "name": "4e5a76a9-fe04-479a-9564-d80fda22054e",
+  "displayName": "Multimedia",
+  "modelParameter": {
+    "temperature": 0.5,
+    "maxDecodeSteps": 7761,
+    "topP": 0.94999999,
+    "topK": 40
+  },
+  "llmModelSettings": {
+    "model": "gemini-1.5-flash"
+  }
+}

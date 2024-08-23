@@ -1,0 +1,53 @@
+{
+  "name": "a430b22b-7b53-4926-a5b6-87a12ad9a6d1",
+  "displayName": "Login Check",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.operation = \"Check Status\" AND $session.params.order_number = null AND $session.params.is_logged_in != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Order Number",
+    "name": "e63a13b6-9021-43d0-b82e-29d67ef9071a"
+  }, {
+    "condition": "$session.params.operation = \"Check Status\" AND $session.params.order_number != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Found",
+    "name": "d61d7bca-63ca-454c-b2c6-333e775a39b3"
+  }, {
+    "condition": "$session.params.is_logged_in != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "User Verification Flow",
+    "name": "1b941e5f-3652-4a5c-8cea-99f53d90daf0"
+  }, {
+    "condition": "$session.params.is_logged_in = true AND $session.params.order_unit = null AND $session.params.order_number = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Recent Order",
+    "name": "68a7d3da-1f4c-4367-8b6b-2ee7c0d44c8d"
+  }, {
+    "condition": "$session.params.is_logged_in = true AND ($session.params.order_unit != null OR $session.params.order_number != null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Found",
+    "name": "d0cf2b58-7c7a-4cd7-a0c5-823bfc20f8f1"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "ab484d6b-d14c-43d2-a77a-ec75dc645422"
+  } ]
+}

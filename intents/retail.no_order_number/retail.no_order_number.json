@@ -1,0 +1,10 @@
+{
+  "name": "6ecc4823-cb6b-4d67-8cc3-b7c0af962f68",
+  "displayName": "retail.no_order_number",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

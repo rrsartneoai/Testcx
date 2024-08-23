@@ -1,0 +1,360 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! I'm the virtual retail agent. I can help you manage your account, check on your orders, search for stores, and purchase items. How can I assist you today?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "sendCallCompanionSms": true
+    },
+    "name": "d0a41e33-b0e1-46c8-ac16-bbbebe68b627"
+  }, {
+    "intent": "small_talk.agent_hand_off",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "e7908f42-e184-4919-9e98-08c309cd1387"
+  }, {
+    "intent": "retail.manage_account_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Manage Account"
+      } ]
+    },
+    "name": "0547bfdf-c365-458b-9d3d-9e2eaf6c7c7e"
+  }, {
+    "intent": "retail.replace_loyalty_card_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Replace Card"
+      } ]
+    },
+    "name": "4b08268d-165a-4931-9470-43f2339e6d9a"
+  }, {
+    "intent": "retail.reset_account_password_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Reset Password"
+      } ]
+    },
+    "name": "6d1216ca-9e1a-4d51-9765-e9656de03e26"
+  }, {
+    "intent": "retail.update_account_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Update Address"
+      } ]
+    },
+    "name": "7e66d2a3-10ec-44de-b666-eb9f15084eff"
+  }, {
+    "intent": "retail.account_loyalty_points_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Loyalty Points"
+      } ]
+    },
+    "name": "803d33ca-c1a7-4bef-8c7a-87c8acc84362"
+  }, {
+    "intent": "retail.nearest_store_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Search Store"
+      } ]
+    },
+    "name": "d614f0ab-cf77-49d3-a078-bc8179b40c17"
+  }, {
+    "intent": "retail.purchase_item_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Purchase Item"
+      } ]
+    },
+    "name": "efc491b4-b14d-49b7-b96a-1c8dfae759d9"
+  }, {
+    "intent": "retail.check_order_status_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Check Status"
+      } ]
+    },
+    "name": "050bcbe1-9110-4233-9014-eba5957371ed"
+  }, {
+    "intent": "retail.return_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Return Order"
+      } ]
+    },
+    "name": "8b4d7167-2c04-4e1f-bb9c-b10a1e973303"
+  }, {
+    "intent": "retail.cancel_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Cancel Order"
+      } ]
+    },
+    "name": "cf107ed2-d77e-4384-be7d-39f9be646299"
+  }, {
+    "intent": "retail.edit_order_shipping_speed_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Speed"
+      } ]
+    },
+    "name": "f5101ab8-1593-407c-bafd-4123c76acba9"
+  }, {
+    "intent": "retail.edit_shipping_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Address"
+      } ]
+    },
+    "name": "be33a757-312b-4d3a-931b-7be437664949"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "condition": "$session.params.has_welcomed_user = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Glad I could help! Thank you for calling. Bye!", "In that case, thank you for calling. Goodbye!", "I hope you were satisfied with our service today. Thanks and goodbye!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "975143eb-a7a4-43af-a508-0406eb744e65"
+  }, {
+    "intent": "small_talk.confirmation.no_thats_all",
+    "condition": "$session.params.has_welcomed_user = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Glad I could help! Thank you for calling. Bye!", "In that case, thank you for calling. Goodbye!", "I hope you were satisfied with our service today. Thanks and goodbye!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "107eb5f8-fdce-4e85-a4b6-f382074cbc08"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, just let me know when you're ready.", "Okay, I can wait. Let me know when you're ready.", "No problem! Just speak up when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c3269936-ea37-43a8-89bb-4b4ad670d1b1"
+  }, {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay! How can I help you?", "Alright. What can I help you with today?", "Great! How can I assist you today?", "No problem. What do you need help with today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9ec7b39d-e65a-458b-b8b8-8349a651077c"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here! How can I help you today?", "I'm here! What can I help you with today?", "Don't worry, I'm here. How can I assist you today?", "Don't worry, I'm still here. How can I help?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "88045cca-ef46-4a41-943a-31f7da7f20e1"
+  }, {
+    "intent": "retail.edit_order_payment_method_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Payment Method"
+      } ]
+    },
+    "name": "ad4ba725-c2c3-44be-9d66-ed9dd770819f"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "condition": "$session.params.has_completed_one_operation = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "What else can I help you with?", "How else can I help?", "What else do you need today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2c1655bc-2b06-4033-ab4c-d39ab155dbbf"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item. Is there anything else I can help with?", "Sorry, we don't have that item for sale. What else can I help you with?", "Sorry, we don't carry that item. How else may I help you today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "57d40710-49d5-4923-8d3c-79b46813f0ad"
+  }, {
+    "intent": "retail.items_for_sale",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can order items such as the Pixel 5, a Nest Thermostat, and a Google Home.", "You can buy items such as a Google Home, a Chromecast, or the new Stadia Controller.", "We have items such as Chromecasts, Google Homes, and Nest thermostats." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      }, {
+        "parameter": "is_returning",
+        "value": true
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "2c8213f1-6a5e-4c47-b58d-7cc0d99aac53"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "has_welcomed_user",
+        "value": true
+      } ]
+    },
+    "targetPage": "Main Menu",
+    "name": "fa501171-f7ad-4712-bc86-98f7b3bb31ae"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "feb432d8-6216-44d1-a71e-63c794742cde"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4750315d-4e6d-4d53-8e1f-669b855f0fff"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "Sorry, could you repeat that?", "I didn't understand that. Could you repeat it please?", "Sorry, I didn't get that. Can you rephrase?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d4b5034c-93b3-4a17-ba4f-4e89648b5358"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't understand that. Could you repeat it please?", "Sorry can you repeat that again?", "I was not able to understand that. Can you say it again please?", "Can you please say that again?", "Sorry, I didn't get that. Can you rephrase?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e7fe9ac7-6747-489b-b33f-d4924b0972f4"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like i'm having trouble understanding the request. Let me transfer you to an agent. ", "Sorry I am having trouble understanding, let me transfer you to an agent. ", "My apologies, doesn't look like I can help with that, let me transfer you to an agent.", "Sorry I didn't get that. Let me transfer you to an agent.\n" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e665a743-cbd9-45ee-b5bc-83f8c4334a96"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I could not hear you there. Can you repeat that?", "Sorry I am unable to hear you. Could you say that again please?", "I am having trouble hearing you. Can you repeat that please?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cc03937d-d163-458b-a8c7-322e14f1bba8"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I could not hear you there. Can you repeat that?", "Sorry I am unable to hear you. Could you say that again please?", "I am having trouble hearing you. Can you repeat that please?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "4293e370-8ac7-4983-b56d-6db3634b7088"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I am having trouble hearing you. Let me transfer you to an agent for better service. ", "Sorry I didn't get that. Let me transfer you to an agent for better assistance.", "Sorry I was not able to hear you. Im going to transfer you to an agent for better service. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "596b7df2-4877-4cf9-a684-68f33a5b7262"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  },
+  "advancedSettings": {
+    "enabled": true
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "languageCode": "en"
+  } ]
+}

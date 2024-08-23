@@ -1,0 +1,10 @@
+{
+  "name": "7ac433cb-7732-4c36-90ad-4af36204034e",
+  "displayName": "small_talk.start_over",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 31
+}

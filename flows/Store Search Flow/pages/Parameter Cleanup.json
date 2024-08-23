@@ -1,0 +1,48 @@
+{
+  "name": "1a7d78c6-faab-4bbf-8e4a-870a20545db2",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "location",
+      "value": null
+    }, {
+      "parameter": "city",
+      "value": null
+    }, {
+      "parameter": "admin_area",
+      "value": null
+    }, {
+      "parameter": "zip_code",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      }, {
+        "parameter": "store_id",
+        "value": null
+      }, {
+        "parameter": "city",
+        "value": null
+      }, {
+        "parameter": "admin_area",
+        "value": null
+      }, {
+        "parameter": "zip_code",
+        "value": null
+      }, {
+        "parameter": "address_collected",
+        "value": null
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "2d54cba7-a905-49cc-a960-3d43e1d118e0"
+  } ]
+}

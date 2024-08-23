@@ -1,0 +1,36 @@
+{
+  "name": "3ddaaa2a-1231-48c0-afeb-b3ce8f43f8e4",
+  "tags": [ "#purchase" ],
+  "displayName": "Error handling - request unsupported item at start of conversation",
+  "notes": "Verifies that if the user attempts to purchase an unsupported item right at the start of the conversation, then the agent responds appropriately with an error message.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'd like to buy some hand lotion"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "retail.unsupported_item_request"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, we don't carry that item. How else may I help you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607362265,
+    "nanos": 900373000
+  }
+}

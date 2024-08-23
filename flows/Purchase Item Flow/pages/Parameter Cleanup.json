@@ -1,0 +1,24 @@
+{
+  "name": "ead054a9-314c-40f1-9e3f-8be4967ef42d",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "cart",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "order_unit",
+        "value": null
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "4d7ccdb8-b31f-463f-a496-8874dcd70451"
+  } ]
+}

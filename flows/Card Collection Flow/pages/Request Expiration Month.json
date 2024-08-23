@@ -1,0 +1,106 @@
+{
+  "name": "90e8d669-50e0-4f48-8974-6076e1298d96",
+  "displayName": "Request Expiration Month",
+  "form": {
+    "parameters": [ {
+      "displayName": "expiration_month",
+      "required": true,
+      "entityType": "@expiration-month",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What’s the expiration month for the card?", "I didn't catch that. What’s the credit card expiration month?", "I didn’t get that. Could you give me the month that the card expires on?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "aaadab9f-f4f5-4632-a46d-f2c54a238923"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry I didn’t catch that. What’s the expiration month for the card?", "I didn't catch that. What’s the credit card expiration month?", "I didn’t get that. Could you give me the month that the card expires on?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a38e98b8-6567-4818-ae5a-ff496aef9eaf"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a31b3273-478f-40e0-bef2-7a5995564f04"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is the expiration month for the card?", "Sorry, I am unable to hear you. What’s the credit card expiration month?", "Sorry, I could not hear you. Could you give me the month that the card expires on?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7d61fd7e-6746-4fe1-949e-70e95465d535"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is the expiration month for the card?", "Sorry, I am unable to hear you. What’s the credit card expiration month?", "Sorry, I could not hear you. Could you give me the month that the card expires on?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "7e87b3f3-5e1f-4837-b22f-0078d5c79a87"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that. ", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "3357b0b6-7f52-4c83-976b-75733298c30d"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What’s the expiration month for the card?", "What’s the credit card expiration month?", "Could you give me the month that the card expires on?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Expiration Year",
+    "name": "1fe01271-30f3-45d3-afef-719081fe852f"
+  } ]
+}

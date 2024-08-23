@@ -1,0 +1,29 @@
+{
+  "name": "56f80b06-a075-4061-b3c1-49e12143008b",
+  "displayName": "Collect City and Admin Area",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.city = null AND $session.params.location.city = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request City",
+    "name": "f5b33c1f-412a-4327-bd64-b77fedf558fc"
+  }, {
+    "condition": "$session.params.admin_area = null AND $session.params.location.admin-area = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Request Admin Area",
+    "name": "e203bb88-4e11-48b2-a9e7-1f610b0be1ed"
+  }, {
+    "condition": "($session.params.city != null OR $session.params.location.city != null) AND ($session.params.admin_area != null OR $session.params.location.admin-area != null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "d19327a8-22d8-480d-8fdf-6c7f1c6b22e6"
+  } ]
+}

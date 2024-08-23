@@ -1,0 +1,291 @@
+{
+  "name": "e7050813-3e3b-46f5-bdb5-c4e14ee127c2",
+  "displayName": "Card Replacement Flow",
+  "transitionRoutes": [ {
+    "intent": "small_talk.start_over",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "c223f3b9-4e85-48e1-b18e-82456509648d"
+  }, {
+    "intent": "small_talk.agent_hand_off",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Agent Redirect Flow",
+    "name": "53a491a0-9cdd-4cc7-9763-efe35deb1b55"
+  }, {
+    "intent": "retail.check_order_status_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Check Status"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "a9479517-265c-4f9a-b394-18da109145a4"
+  }, {
+    "intent": "retail.return_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Return Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "93bf12bd-92db-4a2e-ad13-031b881edb52"
+  }, {
+    "intent": "retail.cancel_order_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Cancel Order"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "2a8d7804-ea04-46ec-a4ed-07524598ed45"
+  }, {
+    "intent": "retail.edit_order_shipping_speed_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Speed"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "ba4b6e0f-fd9e-4459-a459-3fe3558b9187"
+  }, {
+    "intent": "retail.nearest_store_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Search Store"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "6c83ebee-e3db-4424-a0b4-6f6f1e65fa58"
+  }, {
+    "intent": "retail.purchase_item_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Purchase Item"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "0041fff7-aa4e-4590-8d80-9a54022dc39c"
+  }, {
+    "intent": "retail.account_loyalty_points_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Loyalty Points"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "1d4e9f5b-9272-4bc2-b76a-2a44cf59ff59"
+  }, {
+    "intent": "retail.manage_account_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Manage Account"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "ef97c053-16ef-4c9a-b817-d55fca214627"
+  }, {
+    "intent": "retail.update_account_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Update Address"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "0ecb2a4c-fd0a-4d75-86fe-2fad12aa0b5a"
+  }, {
+    "intent": "retail.reset_account_password_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Reset Password"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "8eafe8e3-7094-4a9d-8746-61479243c33d"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, just let me know when you're ready.", "Okay, I can wait. Let me know when you're ready.", "No problem! Just speak up when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a1e0d67c-da33-4340-aa5e-17189d780a36"
+  }, {
+    "intent": "small_talk.still_there",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm still here!", "I'm here!", "Don't worry, I'm here.", "Don't worry, I'm still here." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "2428497d-e06d-42e0-83eb-df68a3bf251e"
+  }, {
+    "intent": "small_talk.ready",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "Alright.", "Great!", "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "7180c5b4-3426-4f8a-8d33-ef8ec42e5e02"
+  }, {
+    "intent": "retail.edit_order_payment_method_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Payment Method"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "64330b16-c3e9-4096-860e-cf17a8d5184b"
+  }, {
+    "intent": "retail.edit_shipping_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Edit Shipping Address"
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "572e5359-e1f4-413b-be35-e48d1c7c1bbd"
+  }, {
+    "intent": "retail.unsupported_item_request",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry, we don't sell that item.", "Sorry, we don't have that item for sale.", "Sorry, we don't carry that item." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0440cbed-9a3e-4971-9ddc-36d41a1a4b27"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Verify Delivery Address",
+    "name": "d49a5b51-15bd-4cab-889f-ac7d3485e036"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6d9a48b8-e3df-45db-8b91-f2e430738567"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "811b5973-17a8-4f20-a27a-04bda652274e"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, could you say that again?", "Sorry, could you repeat that?", "I didn't catch that. Can you say it again?", "Sorry, could you repeat that please?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "49723965-1bca-4fd5-beef-efc88a370653"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, could you say that again?", "Sorry, could you repeat that?", "I didn't catch that. Can you say it again?", "Sorry, could you repeat that please?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "81e9ba8d-8b9a-4534-9743-c36ccad57af6"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "223fd84a-9192-488f-b5dc-e082bf95008e"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you repeat that please?", "Sorry I am unable to hear you. Could you say that again please?", "Sorry I could not hear you there. Can you repeat that?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bf3fe0c0-b8a8-46db-92c3-4c638c1fbf15"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you repeat that please?", "Sorry I am unable to hear you. Could you say that again please?", "Sorry I could not hear you there. Can you repeat that?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3177da90-1b56-4dd2-b8a4-307dea00b395"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I am having trouble hearing you.", "Sorry I didn't get that.", "Sorry I was not able to hear you." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cb3a641c-681b-46ed-b325-6ccda6dd27b1"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  }
+}

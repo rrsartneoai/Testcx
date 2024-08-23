@@ -1,0 +1,50 @@
+{
+  "name": "db1fc856-3dd4-4f74-83c0-b90c1510f12f",
+  "displayName": "Order Found",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.operation = \"Check Status\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Order Status",
+    "name": "f9a59c1f-7be9-4a0f-a082-e72890f5e807"
+  }, {
+    "condition": "$session.params.operation = \"Cancel Order\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cancel Order",
+    "name": "511359ca-c49a-4cfe-b762-e87e02a8366e"
+  }, {
+    "condition": "$session.params.operation = \"Return Order\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return order",
+    "name": "96ffdd67-0eac-44c2-8c1f-43ce4511ac23"
+  }, {
+    "condition": "$session.params.operation = \"Edit Shipping Speed\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Edit Shipping Speed",
+    "name": "e96cc282-5275-4e67-8d23-77c962557f74"
+  }, {
+    "condition": "$session.params.operation = \"Edit Shipping Address\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Edit Shipping Address",
+    "name": "99d18ff8-7936-4ef5-9c16-bcd66bf65951"
+  }, {
+    "condition": "$session.params.operation = \"Edit Payment Method\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Edit Payment Method",
+    "name": "b1982e38-d16b-425a-85e8-0e388ff64579"
+  } ]
+}

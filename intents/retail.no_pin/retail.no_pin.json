@@ -1,0 +1,11 @@
+{
+  "name": "06f52227-7b2c-45a6-a897-da175ca1614b",
+  "displayName": "retail.no_pin",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "description": "Used during the authentication flow, when the agent sends the user a PIN and they haven't received it.",
+  "numTrainingPhrases": 22
+}

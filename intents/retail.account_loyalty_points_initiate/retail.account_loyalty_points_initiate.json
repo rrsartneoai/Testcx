@@ -1,0 +1,10 @@
+{
+  "name": "4c863d69-89c4-4243-ba15-81f34bf980d9",
+  "displayName": "retail.account_loyalty_points_initiate",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 26
+}

@@ -1,0 +1,10 @@
+{
+  "name": "31435b3c-511e-448b-8ae3-b7578b96de92",
+  "displayName": "small_talk.confirmation.no_thats_all",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 26
+}

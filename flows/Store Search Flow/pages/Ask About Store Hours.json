@@ -1,0 +1,120 @@
+{
+  "name": "c0431b62-f92b-4c70-87a1-0145df5f2fa2",
+  "displayName": "Ask About Store Hours",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Would you like to know the store hours?", "Do you want to know the store hours?", "Should I tell you about the store hours?", "Would you like me to tell you about the store hours?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Return Store Hours",
+    "name": "197b39e5-76f3-495d-90f8-7c7b9badf4d0"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay!", "That's fine.", "Understood!", "Alright." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "32d1eb67-ec5d-4b22-81a6-15175bee8a98"
+  }, {
+    "intent": "retail.get_different_store",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't find any other stores.", "I couldn't find any other stores.", "There are no other nearby stores." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Ask About Store Hours",
+    "name": "9e4824b7-e5a5-4a79-bcad-b21f81cae956"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to know the store hours?", "I didn't catch that. Do you want to know the store hours?", "I didn’t get that. Would you like me to tell you about the store hours?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a8b24458-7e02-48bc-a075-dbbb736ce822"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. Would you like to know the store hours?", "I didn't catch that. Do you want to know the store hours?", "I didn’t get that. Would you like me to tell you about the store hours?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b1d81800-5761-4933-b587-de45fcf93482"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like I'm having trouble understanding the request. Let me transfer you to an agent. ", "Sorry, I am having trouble understanding you. Let me transfer you to an agent. ", "My apologies, it doesn't look like I can help with that. Let me transfer you to an agent.", "Sorry, I didn’t get that. Let me transfer you to an agent." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e54784e5-fcbe-4609-818e-0518a87bb2e1"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. Can you repeat that, please?", "Sorry, I am unable to hear you. Could you say that again, please?", "Sorry, I could not hear you. Can you repeat that?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6304de5e-9d2b-459a-9c75-1206aa5f0368"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t hear that. Would you like to know the store hours?", "I missed that. Do you want to know the store hours?", "I didn’t get that. Would you like me to tell you about the store hours?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8b9a23b6-0a44-4e43-a5b4-7eb80eed3662"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you. Let me transfer you to an agent for better service. ", "Sorry, I didn't get that. Let me transfer you to an agent for better assistance.", "Sorry, I was not able to hear you. I will transfer you to an agent for better service. ", "Sorry, I didn’t catch what you said, let me go ahead and transfer you to an agent" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b3ad72ff-652e-4145-8fcf-31fd435e87fb"
+  } ]
+}

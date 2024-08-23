@@ -1,0 +1,27 @@
+{
+  "name": "bf1dcb02-c9f3-4ba5-aa8f-3bf09e399475",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "card_number",
+      "value": null
+    }, {
+      "parameter": "card_expiration_date",
+      "value": null
+    }, {
+      "parameter": "card_zip_code",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "972a8e52-0c93-4808-a4fe-89633bea8e8c"
+  } ]
+}

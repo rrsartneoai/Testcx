@@ -1,0 +1,35 @@
+{
+  "name": "32ea5c85-e8b9-4c1a-8bd2-6a52326f11b9",
+  "displayName": "Collect Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "e26ebd7f-c9b8-4c4a-803f-b4de58e086f9"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Search for Store",
+    "name": "fbf23da9-6973-4512-a6a1-9a9719dfec09"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "512d7a36-0a13-4916-8cb5-462cba28a467"
+  } ]
+}

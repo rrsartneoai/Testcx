@@ -1,0 +1,21 @@
+{
+  "name": "35650578-77db-4010-a6ae-8764ec915416",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "password_reset_method",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "e2fa56db-49fa-420c-9d00-44d1b8825628"
+  } ]
+}

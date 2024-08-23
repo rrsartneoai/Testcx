@@ -1,0 +1,23 @@
+{
+  "entities": [ {
+    "value": "Pixel 5",
+    "synonyms": [ "Pixel 5", "pixel", "pixel phone", "a pixel 5", "a pixel", "a google pixel" ],
+    "languageCode": "en"
+  }, {
+    "value": "Stadia Controller",
+    "synonyms": [ "Stadia", "Google Game system", "Game controller", "a stadia", "a game system", "a game controller", "a google stadia", "a stadia controller", "stadia controller" ],
+    "languageCode": "en"
+  }, {
+    "value": "Nest Thermostat",
+    "synonyms": [ "Nest Thermostat", "thermostat", "Nest", "a thermostat", "a nest thermostat", "a nest" ],
+    "languageCode": "en"
+  }, {
+    "value": "Google Home",
+    "synonyms": [ "Google Home", "a google home" ],
+    "languageCode": "en"
+  }, {
+    "value": "Chromecast",
+    "synonyms": [ "Chromecast", "chrome cast", "a chromecast", "a chrome cast", "a google chromecast", "a google chrome cast" ],
+    "languageCode": "en"
+  } ]
+}

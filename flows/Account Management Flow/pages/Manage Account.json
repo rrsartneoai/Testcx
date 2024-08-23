@@ -1,0 +1,135 @@
+{
+  "name": "70fb9836-b39b-4553-9d32-f0f3f954fba4",
+  "displayName": "Manage Account",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What would you like me to do with your account?", "How can I help you with your account?", "I'm ready to help you with your account. What do you need?", "How can I assist you with your account? ", "How would you like me to assist you with your account?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.account_loyalty_points_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Loyalty Points"
+      } ]
+    },
+    "targetPage": "Choose Account Operation",
+    "name": "45abb83a-54bd-4829-8e1e-43b47e44ba57"
+  }, {
+    "intent": "retail.reset_account_password_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Reset Password"
+      } ]
+    },
+    "targetPage": "Choose Account Operation",
+    "name": "45da1f38-ea9f-4822-a627-f1daf330e74f"
+  }, {
+    "intent": "retail.replace_loyalty_card_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Replace Card"
+      } ]
+    },
+    "targetPage": "Choose Account Operation",
+    "name": "acb1b668-bc77-465b-9a40-5ee86abed8af"
+  }, {
+    "intent": "retail.update_account_address_initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation",
+        "value": "Update Address"
+      } ]
+    },
+    "targetPage": "Choose Account Operation",
+    "name": "3477257e-f0ee-47bf-b2e5-b1bbc74c349a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I didn’t catch that. How can I help you with your account?", "I didn't catch that. What would you like me to do with your account?", "I didn’t get that. I'm ready to help you with your account. What do you need?", "I did not catch that, is there anyway that I can help you with your account? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cce01648-2a06-40d8-8fa3-c4fbcb771553"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry I didn’t catch that. I can help with things like checking loyalty points, resetting passwords, replacing a lost card, or updating your address. How may I help you today? ", "Sorry, I didn't get that. I can help with things like checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?", "Sorry, I didn’t hear that. I can help with things like, checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?", "Sorry, I didn't understand that. I can help with things like, checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "8f73573e-146b-49c0-b049-3de6aaba8196"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. How can I help you with your account?", "Sorry, I am unable to hear you. What would you like me to do with your account?", "Sorry, I could not hear you. I'm ready to help you with your account. What do you need?", "I didn't get that, is there anyway that I can help you with your account? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b6dc9be7-71a4-47ad-b326-94064dcc338c"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am having trouble hearing you. I can help with things like checking loyalty points, resetting passwords, replacing a lost card, or updating your address. How may I help you today? ", "Sorry, I am unable to hear you. I can help with things like checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?", "Sorry, I could not hear you. I can help with things like, checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?", "I didn't get that. I can help with things like, checking loyalty points, resetting passwords, replacing a lost card, or updating your address. What would you like me to help you with?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+          "allowPlaybackInterruption": true
+        }
+      }
+    },
+    "name": "b2c6c521-f2ac-4253-8426-7c76767df8f1"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "90351361-6ac9-4f65-9a99-c8de97cfa1d7"
+  }, {
+    "targetFlow": "Agent Redirect Flow",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Looks like I'm having trouble understanding the request.", "Sorry, I am having trouble understanding you. ", "My apologies, it doesn't look like I can help with that.", "Sorry, I didn’t get that." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a19d3068-7a82-4ee4-8572-dde320a51345"
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "d583ceab-4eef-4c21-97b7-07dff26faf0c",
+  "displayName": "retail.items_for_sale",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "description": "Detects when the user is asking about what they can purchase. Used during the purchase flow.",
+  "numTrainingPhrases": 23
+}

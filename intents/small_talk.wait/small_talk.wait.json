@@ -1,0 +1,10 @@
+{
+  "name": "462e11f6-d4ed-4966-b7a3-63f304badf67",
+  "displayName": "small_talk.wait",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 39
+}

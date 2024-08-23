@@ -1,0 +1,23 @@
+{
+  "name": "6ca9d425-70de-4b7e-a162-809fd6f52fa2",
+  "displayName": "Start Address Collection",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I'll need to verify your old address before I can change it.", "Before I change your address, I'll need to verify your old address.", "First, I'll need to verify your old address.", "I'll need to verify your old address first." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Old Address",
+    "name": "9af7ce52-c426-4012-8a83-0e3bf15f475d"
+  } ]
+}

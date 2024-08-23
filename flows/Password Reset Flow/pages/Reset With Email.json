@@ -1,0 +1,26 @@
+{
+  "name": "609d602a-ccdf-4564-aac1-983ba6fa4292",
+  "displayName": "Reset With Email",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your password has been reset. I've sent a link to your email address.", "A password reset email has been sent to your email address.", "I've sent a password reset email to your email address." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "88e0a365-0933-483f-a67e-dfc23d215b88"
+  } ]
+}

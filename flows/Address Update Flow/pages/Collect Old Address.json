@@ -1,0 +1,32 @@
+{
+  "name": "c026d430-322e-4044-84e3-7db44335a62e",
+  "displayName": "Collect Old Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "39951462-75c7-4169-9a49-52201c0e9d57"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Verify Old Address",
+    "name": "5949b196-7bf3-450c-8b14-565a816ef662"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "611c6fe3-796c-43be-8baf-b2891fb25a3d"
+  } ]
+}

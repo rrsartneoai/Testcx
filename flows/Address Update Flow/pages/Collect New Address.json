@@ -1,0 +1,32 @@
+{
+  "name": "0b0a9678-62fe-4590-9561-d222c41379fb",
+  "displayName": "Collect New Address",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.location = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Address Collection Flow",
+    "name": "7152520b-32b7-4970-8a68-d66bbeb5d11a"
+  }, {
+    "condition": "$session.params.location != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm New Address",
+    "name": "a8c594de-ae4e-4055-9ab8-d8130c3c3591"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "reset",
+        "value": null
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "30172b3e-777b-4dd2-870c-d8e3f806b82e"
+  } ]
+}

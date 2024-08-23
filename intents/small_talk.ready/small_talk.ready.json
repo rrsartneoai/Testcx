@@ -1,0 +1,10 @@
+{
+  "name": "9650777b-37aa-47af-9500-a020493cb128",
+  "displayName": "small_talk.ready",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 26
+}

@@ -1,0 +1,26 @@
+{
+  "name": "9ea6ff8c-9161-47a0-8647-ca4d30311ab8",
+  "displayName": "Finish Address Change",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thank you! I have successfully updated your address.", "Thanks! Your address has been updated.", "Thank you! Your address has been updated." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "6d6c1288-4891-4660-8c54-a0270d9bc688"
+  } ]
+}

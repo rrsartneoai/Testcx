@@ -1,0 +1,10 @@
+{
+  "name": "1e832310-833b-46a3-ba30-23b3a963b72f",
+  "displayName": "retail.replace_loyalty_card_initiate",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 27
+}

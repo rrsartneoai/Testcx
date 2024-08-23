@@ -1,0 +1,10 @@
+{
+  "name": "500a84da-9b43-4f7b-8eb7-c0a50f2f8c96",
+  "displayName": "retail.address_changed",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

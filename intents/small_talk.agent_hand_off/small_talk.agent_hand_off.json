@@ -1,0 +1,10 @@
+{
+  "name": "20309c9d-cd5a-4b43-8855-f7166940ad57",
+  "displayName": "small_talk.agent_hand_off",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 27
+}

@@ -1,0 +1,30 @@
+{
+  "name": "995e91ce-4c5b-4e3e-8e7f-0914968e8b0d",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "location",
+      "value": null
+    }, {
+      "parameter": "city",
+      "value": null
+    }, {
+      "parameter": "admin_area",
+      "value": null
+    }, {
+      "parameter": "zip_code",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "0841b1fb-f4a4-40cc-b8ad-7a7e919f6beb"
+  } ]
+}

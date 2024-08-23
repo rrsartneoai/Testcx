@@ -1,0 +1,36 @@
+{
+  "name": "5581de00-a886-40ff-a2cb-5bdb54ec2c9b",
+  "displayName": "Verify Old Address",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thanks, I've verified your old address. Next, I'll need your new address.", "Thanks, your old address has been verified. I'll need your new address next.", "Thanks, I have verified your old address. I'll just need your new address." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "location",
+      "value": null
+    }, {
+      "parameter": "city",
+      "value": null
+    }, {
+      "parameter": "admin_area",
+      "value": null
+    }, {
+      "parameter": "zip_code",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect New Address",
+    "name": "37a65398-2e8e-40af-bfe0-7ad5973eccb8"
+  } ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "acba3e03-3a98-4d13-ab5a-28a689c1f37b",
+  "displayName": "Collect Billing Details",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.card_is_collected != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Card Collection Flow",
+    "name": "e8cb9a39-ae20-4a19-9500-93ac079f0144"
+  }, {
+    "condition": "$session.params.reset = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "fb0e560e-7e92-442e-88a4-e4019d21b3dc"
+  }, {
+    "condition": "$session.params.card_is_collected = true AND $session.params.is_logged_in = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Placed",
+    "name": "f4586933-02e3-456e-a298-53fbfdd2f709"
+  }, {
+    "condition": "$session.params.card_is_collected = true AND $session.params.is_logged_in != true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "f688fcf5-8765-4b21-bd02-ef5b466b2312"
+  } ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "bbb62b2e-9c57-4274-bff6-26d49581260e",
+  "displayName": "Parameter Cleanup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "allow_guest_login",
+      "value": null
+    }, {
+      "parameter": "pin-number",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.is_logged_in = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "09bf9731-7c86-4b10-9fe1-8d1760c0d490"
+  }, {
+    "condition": "$session.params.is_logged_in != true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "phone-number",
+        "value": null
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "965e35a9-3725-4d80-a2d3-6fe37fdc59de"
+  } ]
+}

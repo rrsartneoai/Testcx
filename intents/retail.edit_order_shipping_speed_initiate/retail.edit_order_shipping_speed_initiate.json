@@ -1,0 +1,14 @@
+{
+  "name": "e9fcf44f-04d6-4cc6-85ba-6af8e9cbc1bb",
+  "displayName": "retail.edit_order_shipping_speed_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 53
+}

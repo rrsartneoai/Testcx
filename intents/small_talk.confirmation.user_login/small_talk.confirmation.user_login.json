@@ -1,0 +1,10 @@
+{
+  "name": "a9f4993b-4979-427c-a827-4262cf3a4c2a",
+  "displayName": "small_talk.confirmation.user_login",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

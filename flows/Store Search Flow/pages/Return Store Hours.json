@@ -1,0 +1,26 @@
+{
+  "name": "2937f549-89b9-43d1-afe2-47eb8c07fa86",
+  "displayName": "Return Store Hours",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "The store hours are 9 to 5, Monday through Friday." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "2bb11175-6998-4e68-a4ac-29d76cac1b89"
+  } ]
+}

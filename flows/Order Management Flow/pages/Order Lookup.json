@@ -1,0 +1,32 @@
+{
+  "name": "6b3bfef0-f253-4cbb-b567-43f4d5d5d025",
+  "displayName": "Order Lookup",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Let me look that up for you.", "Give me a minute to look that up for you.", "I am looking that up for you right now." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.order_unit = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "order_unit",
+        "value": "Pixel 5"
+      } ]
+    },
+    "name": "11094b02-9b1b-4ab3-beb1-689187c8e811"
+  }, {
+    "condition": "$session.params.order_number != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Found",
+    "name": "55fbc7c7-2452-4544-8771-439f8faf85d2"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "c8a46e84-0b0b-4c0c-b646-a1635f8b7c0d",
+  "displayName": "retail.found_order_number",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 27
+}

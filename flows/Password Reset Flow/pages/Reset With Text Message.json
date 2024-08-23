@@ -1,0 +1,26 @@
+{
+  "name": "8252bcfc-039e-43fd-b530-93ed98411897",
+  "displayName": "Reset With Text Message",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Your password has been reset. I've sent a message to your phone.", "I've reset your password. You should receive a text message to your phone.", "I've sent instructions on how to reset your password via text message." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operation_complete",
+        "value": true
+      } ]
+    },
+    "targetPage": "Parameter Cleanup",
+    "name": "2e9a0c29-9677-4576-a465-738d5cb462f0"
+  } ]
+}

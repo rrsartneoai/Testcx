@@ -1,0 +1,10 @@
+{
+  "name": "4b2a9a78-2b49-4603-945f-898d6bd1c13b",
+  "displayName": "small_talk.still_there",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 25
+}

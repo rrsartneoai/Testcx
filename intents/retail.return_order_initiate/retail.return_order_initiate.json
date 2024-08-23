@@ -1,0 +1,14 @@
+{
+  "name": "0643aa40-680d-476f-afbd-e01393487baf",
+  "displayName": "retail.return_order_initiate",
+  "parameters": [ {
+    "id": "order_unit",
+    "entityType": "@order-unit"
+  } ],
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-head",
+    "value": "sys-head"
+  } ],
+  "numTrainingPhrases": 50
+}

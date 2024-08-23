@@ -1,0 +1,10 @@
+{
+  "name": "d2744a52-4b87-44f9-839b-d646aa327faf",
+  "displayName": "small_talk.confirmation.correct_phone_number",
+  "priority": 500000,
+  "labels": [ {
+    "key": "sys-contextual",
+    "value": "sys-contextual"
+  } ],
+  "numTrainingPhrases": 29
+}

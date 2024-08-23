@@ -1,0 +1,43 @@
+{
+  "name": "a0ad5e02-1ca3-4e46-8014-01ddff663f43",
+  "tags": [ "#purchase" ],
+  "displayName": "Happy path - Users asks what they can buy without the initial welcome",
+  "notes": "Verifies that the user can ask what they can buy before being greeted by the agent.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "What can I buy"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "has_completed_one_operation": true,
+        "is_returning": false,
+        "operation_complete": false
+      },
+      "triggeredIntent": {
+        "name": "retail.items_for_sale"
+      },
+      "currentPage": {
+        "name": "Main Menu",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You can buy items such as a Google Home, a Chromecast, or the new Stadia Controller." ]
+      }, {
+        "text": [ "Is there anything else you need help with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607443951,
+    "nanos": 413073000
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "name": "1ecb7768-931d-4bc5-b86f-6ce609f45afc",
+  "displayName": "Request Zip Code",
+  "form": {
+    "parameters": [ {
+      "displayName": "zip_code",
+      "required": true,
+      "entityType": "@sys.zip-code",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What's your zip code?", "I didn't catch that. May I have your zip code?", "I didn’t get that. Can I get your zip code?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f60cd119-6e5c-4814-84b4-2603e35053a4"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What's your zip code? You may use the keypad if that’s easier. ", "I didn't catch that. May I have your zip code? You can say it or type it into the keypad.", "I didn’t get that. Can I get your zip code? You can say it out loud or type it in.", "Sorry, I didn’t understand that. You can say it or type it into the keypad. ", "Sorry, I didn’t understand that.  Can I get your zip code? You can say it out loud or type it in." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "5639daaa-0d9a-4d8a-b44e-71be4bb1b22c"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "0701dde2-6765-4740-b01a-867b3e070511"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What's your zip code?", "Sorry, I am unable to hear you. May I have your zip code?", "Sorry, I could not hear you. Can I get your zip code?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "19fdf0ea-043f-40c1-aada-042df068218b"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What's your zip code? You may use the keypad if that’s easier. ", "Sorry, I am unable to hear you. May I have your zip code? You can say it or type it into the keypad.", "Sorry, I could not hear you. Can I get your zip code? You can say it out loud or type it in.", "Sorry, I didn’t catch what you said. What's your zip code? You can type it in if you prefer." ]
+              },
+              "languageCode": "en"
+            } ],
+            "advancedSettings": {
+              "playbackInterruptionSettings": {
+                "allowPlaybackInterruption": true
+              }
+            }
+          },
+          "name": "e482a393-dfd8-49a3-8f06-022a8a425669"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "030ebddb-84d2-470b-b715-47556e6d5860"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 5,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "What's your zip code? You can say it or type it on your keypad.", "What's your zip code? You can say it out loud or type it in.", "May I have your zip code? You can say it or type it into the keypad.", "May I have your zip code? You can say it out loud or type it in." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.extract.city_and_admin_area",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect City and Admin Area",
+    "name": "3558a1aa-4b4d-4fb4-9ccd-5ce42d5ff7e1"
+  }, {
+    "intent": "retail.unknown_zip",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "That's okay!", "That's alright!", "That's fine!", "No problem!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Request City",
+    "name": "1431464d-ac4e-4e99-a832-6500642872c8"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Address Collected",
+    "name": "15ea0fd4-c1a1-48ad-9af3-0ee366c3525f"
+  } ]
+}

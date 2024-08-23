@@ -1,0 +1,124 @@
+{
+  "name": "bdd5d6a7-1446-4693-b933-4d76f87d3c7c",
+  "displayName": "Check Order Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "order_number",
+      "required": true,
+      "entityType": "@order-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+              "allowPlaybackInterruption": true
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What is your order number?", "I didn't catch that. Can you provide me the order number?", "I didn’t get that. What is the number for that order?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "bab1050f-ac12-4f9c-b198-405e10fda232"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn’t catch that. What is your order number? It should be a 5 digit number at the top right corner of your confirmation email.", "I didn't catch that. Can you give me the order number? It should be a 5 digit number at the top right corner of your confirmation email.", "I didn’t get that. What is the number for that order? It should be a 5 digit number at the top right corner of your confirmation email." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5ecadd8a-c042-4fa4-9696-75235eeaeccb"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Seems like I'm having trouble understanding your requests.", "Sorry, I'm having trouble understanding you.", "Sorry, I still didn’t understand that.", "It looks like we're having issues communicating.", "It seem I’m having a problem understanding you." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f48ba9d6-16ac-42d7-8376-cc9737596392"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is your order number?", "Sorry, I am unable to hear you. Can you provide me the order number?", "Sorry, I could not hear you. What is the number for that order?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "cf43934e-43d0-44a4-848f-408515a5ed89"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am having trouble hearing you. What is your order number? It should be a 5 digit number at the top right corner of your confirmation email.", "Sorry, I am unable to hear you. Can you give me the order number? It should be a 5 digit number at the top right corner of your confirmation email.", "Sorry, I could not hear you. What is the number for that order? It should be a 5 digit number at the top right corner of your confirmation email." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "6f3ffdfd-7830-4081-8f26-92c3440da361"
+        }, {
+          "targetFlow": "Agent Redirect Flow",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I am having trouble hearing you.", "Sorry, I didn't get that.", "Sorry, I was not able to hear you.", "Sorry, I didn’t catch what you said." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "9a003dd0-2124-4763-84be-8cc83ebb0cec"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Could you provide me with the order number, please? Alternatively, you can type it in and press pound.", "Just say the order number whenever you are ready. Feel free to type it in and press pound if that’s easier.", "What is the number for that order? You can also type it in and press pound, if you prefer. ", "Can you tell me your order number, please? Alternatively, you can type it in and press pound.", "What's your order number? You can either say it or enter it into the keypad, followed by the pound sign." ]
+      },
+      "languageCode": "en"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "retail.no_order_number",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Lost Order Number",
+    "name": "e0e6a0d6-b915-44d1-8397-15ba9c42992c"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Order Lookup",
+    "name": "87a440db-1539-4710-b97c-0194bbaf9c2d"
+  } ]
+}
